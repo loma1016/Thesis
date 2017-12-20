@@ -1,0 +1,253 @@
+
+\documentclass[a4paper, 12pt, twoside, headsepline=true]{scrartcl} % headsepline ist für die Linie unter der Kopfzeile verantwortlich
+
+% Package für Sprachformatierung und Spellchecks
+% http://ctan.space-pro.be/tex-archive/macros/latex/contrib/polyglossia/polyglossia.pdf
+\usepackage{polyglossia}
+\setdefaultlanguage[spelling=new]{german}
+
+% Package zum Ändern von Headern & Footers
+% mirrors.ctan.org/macros/latex/contrib/koma-script/doc/scrguien.pdf
+\usepackage[automark]{scrlayer-scrpage}
+\clearpairofpagestyles
+\ihead{\headmark}
+\ohead{\pagemark}
+
+\pagestyle{scrheadings}
+\setkomafont{pageheadfoot}{\small}
+
+% Package zum Festlegen von Zeilenabstand
+% https://www.namsu.de/Extra/pakete/Setspace.html
+\usepackage[onehalfspacing]{setspace}
+\setmainfont{Charis SIL} % set the main body font (\textrm), assumes Charis SIL is installed
+\setlength{\parindent}{0pt}
+
+
+\usepackage{csquotes}
+
+% Package für das Referenzieren von Quellen aus .bib-Datei
+\usepackage[style=ieee]{biblatex}
+\addbibresource{mybib.bib}
+
+% Package zum "Patchen" von Befehlen
+% http://vesta.informatik.rwth-aachen.de/ftp/pub/mirror/ctan/macros/latex/contrib/xpatch/xpatch.pdf
+% Überschreibt biblatex-Funktionalität, damit keine leeren Jahresklammern gedruckt werden
+\usepackage{xpatch}
+\xpatchbibdriver{online}
+{\printtext[parens]{\usebibmacro{date}}}
+{\iffieldundef{year}
+	{}
+	{\printtext[parens]{\usebibmacro{date}}}}
+{}
+{\typeout{There was an error patching biblatex-ieee (specifically, ieee.bbx's @online driver)}}
+
+% Package zum Anpassen von enumerations-items 
+% https://de.wikibooks.org/wiki/LaTeX-W%C3%B6rterbuch:_enumitem
+\usepackage{enumitem}
+\renewcommand{\labelitemiii}{$\star$}
+
+% Package für die Anpassung der Seitengestaltung, z.B. Seitenränder
+% https://www.namsu.de/Extra/pakete/Geometry.html
+\usepackage{geometry}
+
+% Package für Tabellengestaltung mit horizontalen Trennlinien
+% https://www.namsu.de/Extra/pakete/Booktabs.html
+\usepackage{booktabs}
+
+% Package für Gestaltung und Anpassung einzelner Tabellenzellen 
+% http://babyname.tips/mirrors/ctan/macros/latex/contrib/makecell/makecell.pdf
+\usepackage{makecell}
+
+% Package für Positionierung von "floats", also nichtfesten Elementen wie Tabellen oder Bildern, die sich je nach Textgestaltung verschieden auf der Seite befinden müssen
+% http://vesta.informatik.rwth-aachen.de/ftp/pub/mirror/ctan/macros/latex/contrib/float/float.pdf
+\usepackage{float}
+
+% Package für Tabellengestaltung 
+% https://www.namsu.de/Extra/pakete/Tabularx.html
+\usepackage{tabularx,ragged2e}
+\newcolumntype{L}{>{\RaggedRight\arraybackslash}X}
+
+% Package zum Anpassen von Macros/KeyValue-Daten. Hab ich garnicht verwendet, glaube ich
+% http://mirrors.ibiblio.org/CTAN/macros/latex/contrib/adjustbox/adjustbox.pdf
+\usepackage[export]{adjustbox}
+
+% Package für Verwaltung von Acronymen 
+% https://www.namsu.de/Extra/pakete/Acronym.html
+\usepackage[printonlyused]{acronym}
+
+% Package zum Implementieren von Textlinks
+% https://www.namsu.de/Extra/pakete/Hyperref.html
+\usepackage[
+german,
+colorlinks=true,
+linkcolor=blue, % einfache interne Verknüpfungen
+%TODO: Folgende Zeile für Druckdokument verwenden!
+%hidelinks=true
+anchorcolor=black,% Ankertext
+citecolor=green, % Verweise auf Literaturverzeichniseinträge im Text
+urlcolor=cyan % Farbe der URLs
+ %Back-Links zu den Kapiteln
+]{hyperref}
+\apptocmd{\UrlBreaks}{\do\f\do\m}{}{}
+\setcounter{biburllcpenalty}{9000}% Kleinbuchstaben
+\setcounter{biburlucpenalty}{9000}% Großbuchstaben
+\setcounter{biburlnumpenalty}{9000}% Zahlen
+%\usepackage[german,draft]{hyperref}
+
+%Neudefinition für den Name von Subsubsection, damit "Unterunterabschnitt" nicht bei Referenzen auftaucht
+\def\subsubsectionname{Unterabschnitt}%
+\def\subsubsectionautorefname{Unterabschnitt}%
+
+% Package für besseren Umgang mit Grafiken
+% http://ftp.gwdg.de/pub/ctan/macros/latex/required/graphics/grfguide.pdf
+\usepackage{graphicx}
+
+% Package für Platzieren von Bildern neben/im Text
+% https://www.namsu.de/Extra/pakete/Wrapfig.html
+\usepackage{wrapfig}
+\newcommand{\myhline}{\noalign{\global\arrayrulewidth0,1cm}\hline
+	\noalign{\global\arrayrulewidth1pt}}
+% Umbenennung der Caption Beschreibung unter Bildern von "Abbildung" in "Abb." um Platz zu sparen.
+\addto\captionsgerman{%
+	\renewcommand{\figurename}{Abb.}%
+}
+
+% Definiere eine neue Liste bei der die Unterpunkte auch nummeriert sind, wie bei einem Inhaltsverzeichnis.
+\newlist{legal}{enumerate}{10}
+\setlist[legal]{label*=\arabic*.}
+%\setcounter{tocdepth}{4}
+%\setcounter{secnumdepth}{4}
+
+\makeatletter 
+\@addtoreset{figure}{section} 
+\@addtoreset{table}{section} 
+\makeatother 
+
+%Commands zum Neustarten der Seitennummerierung ab Inahltsverzeichnis, falls vorher noch Titelseiten o.Ä. folgen
+\renewcommand{\thefigure}{\thesection.\arabic{figure}} 
+\renewcommand{\thetable}{\thesection.\arabic{table}} 
+
+\begin{document}
+% Nötig um in der PDF Datei einen Lesezeicheneintrag für das Inhaltsverzeichnis zu bekommen.
+\pdfbookmark[1]{Inhaltsverzeichnis}{toc}
+\tableofcontents
+\clearpage
+\newpage
+
+\addsec{Abkürzungsverzeichnis}
+
+\pdfbookmark[2]{Abkürzungsverzeichnis}{toc}
+% Angabe in eckigen Klammern sollte das längste Acronym enthalten.
+% Das ist notwendig damit sich der Einschub am längsten Acronym orientiert.
+\begin{acronym}[header=Abkürzungsverzeichnis]
+	\acro{aclabel}[BSP]{Beispiel}
+\end{acronym}
+
+\clearpage
+
+\addcontentsline{toc}{section}{Tabellenverzeichnis}
+\listoftables
+\clearpage
+
+\addcontentsline{toc}{section}{Abbildungsverzeichnis}
+\listoffigures
+\clearpage
+
+
+\section{Einleitung} \label{sec:section}
+Verwendeter Editor LaTeX: TeXstudio, mit Compiler XeLaTeX
+
+\subsection{Motivation} \label{sec:subsection}
+Das Internet of Things, kurz IoT ist eines der größten IT-Buzzwords
+der letzten Jahre. Die durch die Vernetzung von Gegenständen
+gewonnen Ereignisse bzw. Daten bieten neben dem Potential der
+Prozessoptimierung und Erweiterung noch die Möglichkeit zur
+Generierung völlig neuer Geschäftsprozesse und Modelle. Des
+Weiteren sinken die Kosten dafür physische Dinge mit Sensoren
+auszustatten und untereinander zu vernetzen, was zu einem hohen
+Andrang an IoT Projekten führt[1]. Laut Gartner sollen im Jahr 2020
+mehr als die Hälfte der wichtigsten Geschäftsprozess Elemente des IoT
+beinhalten[1]. 
+
+\subsection{Problemstellung} 
+Häufig gestaltet sich die Darstellung und Modellierung
+der neuen Geschäftsprozesse jedoch schwierig, da Standards wie
+BPMN nur bedingt hierfür geeignete Elemente vorsehen. Erschwert
+wird dies dadurch, dass keine klare Abgrenzung zwischen dem
+eigentlichen Geschäftsprozess und dem Sammeln, Aggregieren und
+Auswerten der Daten besteht. Diese Fragestellungen bilden die
+Grundlage für diese Thesis
+
+\subsection{Zielsetzung}
+Ziel der Thesis ist die Konzeption eines Modellierungsansatzes für IoT
+Workflows.
+Zunächst werden Unterscheidungsmerkmale zwischen IoT und
+normalen Workflows herausgearbeitet. Daraus werden
+generalisierte IoT Workflows festgelegt, welche typische Muster und
+Best Practices beinhalten. Anhand der generalisierten IoT Workflows
+werden Unterschiede und Besonderheiten gegenüber Workflows
+herausgearbeitet, welche bei der Modellierung berücksichtigt werden
+müssen. Aus diesen werden Kriterien abgeleitet welche zur
+Evaluierung der Modellierungsmöglichkeiten verwendet werden.
+Anschließend werden gängige Modellierungsmöglichkeiten vorgestellt
+und anhand der vorher festgelegten Kriterien evaluiert.
+Der so konzipierte Ansatz wird auf ein oder mehrere Use-Cases
+angewandt, abschließend erfolgt eine Bewertung.
+
+\subsection{Aufbau der Thesis}
+
+\newpage
+
+\section{Grundlagen} \label{sec:section2}
+
+\subsection{Prozess Modellierung}
+
+\subsubsection{BPMN}
+
+\subsubsection{UML}
+
+\subsubsection{Geschäftsregeln}
+
+\subsubsection{IoT - A}
+
+\subsection{IoT}
+
+\subsection{BPM}
+
+\newpage
+
+
+\section{IoT Worklfows}
+
+\subsection{Typische Muster und Best Practices von IoT Workflows}
+
+\subsection{Unterschiede IoT Workflows zu Workflows}
+
+\subsection{Evaluierungskriterien}
+
+\subsection{Bewertung der Modellierungsmethoden}
+
+\subsection{ Modellierungs -Konzept}
+
+\newpage
+
+\section{Evaluierung}
+
+\newpage
+
+\section{Schlussteil}
+
+\subsection{Ergebnis}
+
+\subsection{Fazit}
+
+\subsection{Weiterführende Arbeit/ Ausblick}
+
+\newpage
+
+\addsec{Literaturverzeichnis}
+\printbibliography[heading=none]
+\newpage
+\addsec{Anhang}
+\subsection*{Unterbereich Anhang}
+\end{document}

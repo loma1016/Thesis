@@ -1,0 +1,16 @@
+% Encoding: UTF-8
+
+@Book{beispielLit,
+  title      = {Beispielbuch},
+  publisher  = {Beispielverlag},
+  year       = {2000},
+  author     = {Hans, Dieter},
+  edition    = {1. Auflage},
+  location   = {Schlaraffenland},
+  titleaddon = {Titelzusatz},
+}
+
+@Article{,
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
