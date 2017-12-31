@@ -120,7 +120,7 @@ urlcolor=cyan % Farbe der URLs
 
 \makeatletter 
 \@addtoreset{figure}{section} 
-\@addtoreset{table}{section} 
+\@addtoreset{table}{section}
 \makeatother 
 
 %Commands zum Neustarten der Seitennummerierung ab Inahltsverzeichnis, falls vorher noch Titelseiten o.Ä. folgen
@@ -140,13 +140,17 @@ urlcolor=cyan % Farbe der URLs
 % Angabe in eckigen Klammern sollte das längste Acronym enthalten.
 % Das ist notwendig damit sich der Einschub am längsten Acronym orientiert.
 \begin{acronym}[header=Abkürzungsverzeichnis]
-	\acro{aclabel}[BSP]{Beispiel}
+	\acro{bpmn}[BPMN]{Business Process Model and Notation}
+	\acro{eoi}[EoI]{Entity of Interest}
+	\acro{iot}[IoT]{Internet of Things}
 \end{acronym}
 
 \clearpage
 
 \addcontentsline{toc}{section}{Tabellenverzeichnis}
+
 \listoftables
+
 \clearpage
 
 \addcontentsline{toc}{section}{Abbildungsverzeichnis}
@@ -155,79 +159,91 @@ urlcolor=cyan % Farbe der URLs
 
 
 \section{Einleitung} \label{sec:section}
-Verwendeter Editor LaTeX: TeXstudio, mit Compiler XeLaTeX
 
 \subsection{Motivation} \label{sec:subsection}
-Das Internet of Things, kurz IoT ist eines der größten IT-Buzzwords
-der letzten Jahre. Die durch die Vernetzung von Gegenständen
-gewonnen Ereignisse bzw. Daten bieten neben dem Potential der
+Das \ac{iot} ist eines der größten IT-Buzzwords
+der letzten Jahre und und beschreibt die durch eingebettete Elektronik ermöglichte Vernetzung von physischen Dingen
+Die dadurch gewonnen Ereignisse bzw. Daten bieten neben dem Potential der
 Prozessoptimierung und Erweiterung noch die Möglichkeit zur
-Generierung völlig neuer Geschäftsprozesse und Modelle. Des
-Weiteren sinken die Kosten dafür physische Dinge mit Sensoren
+Generierung völlig neuer Geschäftsprozesse und Modelle. 
+Das Weiteren sinken die Kosten dafür physische Dinge mit Sensoren
 auszustatten und untereinander zu vernetzen, was zu einem hohen
-Andrang an IoT Projekten führt[1]. Laut Gartner sollen im Jahr 2020
-mehr als die Hälfte der wichtigsten Geschäftsprozess Elemente des IoT
-beinhalten[1]. 
+Andrang an \ac{iot} Projekten führt. Laut Gartner sollen im Jahr 2020
+mehr als die Hälfte der wichtigsten Geschäftsprozess Elemente des \ac{iot}
+beinhalten. 
 
 \subsection{Problemstellung} 
 Häufig gestaltet sich die Darstellung und Modellierung
 der neuen Geschäftsprozesse jedoch schwierig, da Standards wie
-BPMN nur bedingt hierfür geeignete Elemente vorsehen. Erschwert
+\ac{bpmn} nur bedingt hierfür geeignete Elemente vorsehen. Erschwert
 wird dies dadurch, dass keine klare Abgrenzung zwischen dem
 eigentlichen Geschäftsprozess und dem Sammeln, Aggregieren und
 Auswerten der Daten besteht. Diese Fragestellungen bilden die
 Grundlage für diese Thesis
 
 \subsection{Zielsetzung}
-Ziel der Thesis ist die Konzeption eines Modellierungsansatzes für IoT
-Workflows.
-Zunächst werden Unterscheidungsmerkmale zwischen IoT und
-normalen Workflows herausgearbeitet. Daraus werden
-generalisierte IoT Workflows festgelegt, welche typische Muster und
-Best Practices beinhalten. Anhand der generalisierten IoT Workflows
-werden Unterschiede und Besonderheiten gegenüber Workflows
-herausgearbeitet, welche bei der Modellierung berücksichtigt werden
-müssen. Aus diesen werden Kriterien abgeleitet welche zur
-Evaluierung der Modellierungsmöglichkeiten verwendet werden.
-Anschließend werden gängige Modellierungsmöglichkeiten vorgestellt
-und anhand der vorher festgelegten Kriterien evaluiert.
-Der so konzipierte Ansatz wird auf ein oder mehrere Use-Cases
-angewandt, abschließend erfolgt eine Bewertung.
+Ziel der Thesis ist die Konzeption eines Modellierungsansatzes für \ac{iot}
+Workflows. Hierfür werden Grundlegende Besonderheiten von \ac{iot} Workflows festgehalten und davon ausgehend Evaluierungskriterien für die Bewertung gängiger abgeleitet. Anhand der Kriterien werden Modellierungsmethoden bewertet und gegebenenfalls mögliche Erweiterungsmöglichkeiten vorgestellt. Der daraus resultierende Ansatz wird auf vorhandene Use-Cases angewandt und bewertet.
 
 \subsection{Aufbau der Thesis}
-
+Nach der Einleitung mit Motivation, Problemstellung, Zielsetzung
+ sowie dem Aufbau der Thesis folgen Grundlagen im Bereich der Prozess Modellierung, 
+ des Internet of Things, des Business Process Managements sowie der Internet of Things Architektur, welche zum Verständnis der weiteren Arbeit dienen.
+ 
+ Im Hauptteil werden typische Muster von \ac{iot} Workflows festgelegt. Aus den festgelegten Workflows werden Unterschiede und Besonderheiten zwischen \ac{iot} Workflows und Workflows ohne \ac{iot} Integration herausgearbeitet, welche bei der Modellierung zu berücksichtigen sind.
+ Anhand der Unterschiede werden Evaluierungskriterien für die Geschäftsprozess Modellierung abgeleitet. Diese Evaluierungskriterien werden im Anschluss dazu verwendet um bestehende Modellierungsmethoden auf ihre Eignung zur Modellierung von \ac{iot} Workflows zu bewerten. Basierend auf der Bewertung wird ein Modellierungskonzept für \ac{iot} Workflows festgelegt. Im Anschluss daran werden ein oder mehrere Use-Cases analysiert und das Modellierungskonzept darauf angewandt. Anhand der Ergebnisse wird das Modellierungskonzept bewertet.
+ 
+Im Schlussteil wird das Ergebnis festgehalten, ein Fazit getroffen und weiterführende Arbeiten sowie ein Ausblick vorgestellt.
+ 
 \newpage
 
 \section{Grundlagen} \label{sec:section2}
 
+In diesem Kapitel werden zunächst Grundlagen des Internet of Things erläutert. Anschließend werden die wichtigsten Prozess Modellierungsmethoden dargestellt und Grundlagen des Business Process Managements erklärt. Zum Abschluss werden zwei Erweiterungen von BPMN zur Modellierung von IoT Workflows vorgestellt.
+
+\subsection{Internet of Things}
+
 \subsection{Prozess Modellierung}
 
+In vielen heutigen Unternehmen unterstützen Informationssysteme nicht mehr nur das Geschäft,sondern sie werden immer mehr zu einem integralen Bestandteil davon. Alle Unternehmen machen einen gewissen Gebrauch von Informationstechnologie, und es ist wichtig, dass ihre Systeme wirklich so aufgebaut sind, dass sie die Unternehmen unterstützen in denen sie zum Einsatz kommen. Das Geschäft bestimmt letztlich die Anforderungen, welche an die Informationssysteme definieren. Die Entwicklung von Software ohne ein angemessenes Verständnis des Kontextes, in welchem diese Software betrieben werden soll, ist nahezu unmöglich. Um ein solches Verständnis zu erlangen, ist es unerlässlich, dass man
+ein Geschäftsmodell definiert. Ein Modell ist eine vereinfachte Sicht auf eine
+komplexe Realität. Diese Abstraktion erlaubt es irrelevante Details zu vernachlässigen und den Fokus auf die Kernelemente zu legen. Effektive Modelle erleichtern zudem
+Diskussionen zwischen verschiedenen Stakeholdern im Unternehmen,
+Sie ermöglichen es ihnen, sich auf die wichtigsten Grundlagen zu einigen und auf gemeinsame Ziele hinzuarbeiten. Die Modellierung von Geschäftsprozessen ist als Mittel zur Analyse und zum Design von Software akzeptiert und etabliert. Die sich ständig weiterentwickelnden Modelle helfen den Entwicklern auch dabei, ihr Denken zu strukturieren und zu fokussieren. Die Arbeit mit den Modellen dient ihnen zum Verständnis für das Geschäft und erhöht dadurch   das Bewusstsein für neue Möglichkeiten zur Verbesserung des Geschäfts.
+
 \subsubsection{BPMN}
+
+\ac{bpmn} ist ein Standard für die Geschäftsprozessmodellierung, der eine grafische Notation zur Spezifikation von Geschäftsprozessen in einem Business Process Diagram (BPD),2 auf der Grundlage traditioneller Flussdiagrammtechniken bereitstellt. Das Ziel von \ac{bpmn} ist es, die Geschäftsprozessmodellierung sowohl für technische Anwender als auch für Geschäftsanwender zu unterstützen, indem eine Notation bereitgestellt wird, die für Geschäftsanwender intuitiv ist und dennoch komplexe Prozesssemantik abbilden kann. Die \ac{bpmn} 2.0-Spezifikation bietet auch Ausführungssemantik sowie das Mapping zwischen den Grafiken der Notation und anderen Ausführungssprachen, insbesondere der Business Process Execution Language.
+(BPEL).3 \ac{bpmn} ist so konzipiert, dass es für alle Beteiligten leicht verständlich ist.
+Dazu gehören die Business-Analysten, welche die Prozesse erstellen und verfeinern, die technischen Entwickler, welche für die Implementierung zuständig sind sowie Geschäftsleiter welche Prozesse überwachen und verwalten. Somit dient \ac{bpmn} zur Überbrückung der häufig auftretenden Kommunikationslücke zwischen Geschäftsprozessen
+Design und Umsetzung. Im Anhang befindet sich ein Übersicht über die wichtigsten Modellierungsmethoden von \ac{bpmn}
+//Quelle: $http://www.omg.org/news/whitepapers/Business_Process_Model_and_Notation.pdf$
+
 
 \subsubsection{UML}
 
 \subsubsection{Geschäftsregeln}
 
-\subsubsection{IoT - A}
-
-\subsection{IoT}
-
 \subsection{BPM}
+
+\subsection{IoT - A}
+
+\subsection{BPMN4CPS}
 
 \newpage
 
 
-\section{IoT Worklfows}
+\section{IoT Workflows}
 
 \subsection{Typische Muster und Best Practices von IoT Workflows}
 
-\subsection{Unterschiede IoT Workflows zu Workflows}
+\subsection{Unterschiede IoT Workflows zu regulären Workflows}
 
 \subsection{Evaluierungskriterien}
 
 \subsection{Bewertung der Modellierungsmethoden}
 
-\subsection{ Modellierungs -Konzept}
+\subsection{ Modellierungskonzept}
 
 \newpage
 
