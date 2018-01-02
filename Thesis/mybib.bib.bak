@@ -66,4 +66,33 @@
   url     = {https://doi.org/10.1007/s00779-013-0665-z},
 }
 
+@InBook{Abdmeziem2016,
+  pages     = {55--75},
+  title     = {Architecting the Internet of Things: State of the Art},
+  publisher = {Springer International Publishing},
+  year      = {2016},
+  author    = {Abdmeziem, Mohammed Riyadh and Tandjaoui, Djamel and Romdhani, Imed},
+  editor    = {Koubaa, Anis and Shakshuki, Elhadi},
+  address   = {Cham},
+  isbn      = {978-3-319-22168-7},
+  abstract  = {Internet of things (IoT) constitutes one of the most important technological development in the last decade. It has the potential to deeply affect our life style. However, its success relies greatly on a well-defined architecture that will provide scalable, dynamic, and secure basement to its deployment. In fact, several challenges stand between the conceptual idea of IoT, and the full deployment of its applications into our daily life. IoT deployment is closely related to the establishment of a standard architecture. This architecture should support future extensions, and covers IoT characteristics such as distributivity, interoperability, and scalability. A well defined, scalable, backward compatible, and secure architecture is required to bring the IoT concept closer to reality. In the literature, several architectures have been proposed. Nevertheless, each architecture brings a share of drawbacks, and fails covering all IoT characteristics. In this chapter, we review the main proposed architectures for the Internet of Things, highlighting their adequacy with respect to IoT requirements. Firstly, we present IoT building blocks. Then, we introduce the high level architecture of IoT before diving into the details of each proposed architecture. In addition, we introduce a classification of the reviewed architectures based on their technical aspects, and their ability to match IoT characteristics. Finally, based on the main shortcomings of the proposed architectures, we conclude with some design ideas for shaping the future IoT.},
+  booktitle = {Robots and Sensor Clouds},
+  doi       = {10.1007/978-3-319-22168-7_3},
+  url       = {https://doi.org/10.1007/978-3-319-22168-7_3},
+}
+
+@InBook{Kossak2016,
+  pages     = {1--13},
+  title     = {Introduction},
+  publisher = {Springer International Publishing},
+  year      = {2016},
+  author    = {Kossak, Felix and Illibauer, Christa and Geist, Verena and Natschl{\"a}ger, Christine and Ziebermayr, Thomas and Freudenthaler, Bernhard and Kopetzky, Theodorich and Schewe, Klaus-Dieter},
+  address   = {Cham},
+  isbn      = {978-3-319-30496-0},
+  abstract  = {In the Introduction, we motivate the increasing need for extending current approaches to business process modelling. We give an outline of the book and briefly introduce our chief contributions---deontic classifications of tasks, actor modelling, user interaction modelling, enhanced communication modelling, and the integration of all these aspects together with classical process modelling, including a respective architecture for tool support. We also give an overview over the state of the art and compare the most important methods and languages with our own approach.},
+  booktitle = {Hagenberg Business Process Modelling Method},
+  doi       = {10.1007/978-3-319-30496-0_1},
+  url       = {https://doi.org/10.1007/978-3-319-30496-0_1},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

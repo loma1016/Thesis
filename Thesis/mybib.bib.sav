@@ -81,4 +81,32 @@
   url       = {https://doi.org/10.1007/978-3-319-22168-7_3},
 }
 
+@InBook{Kossak2016,
+  pages     = {1--13},
+  title     = {Introduction},
+  publisher = {Springer International Publishing},
+  year      = {2016},
+  author    = {Kossak, Felix and Illibauer, Christa and Geist, Verena and Natschl{\"a}ger, Christine and Ziebermayr, Thomas and Freudenthaler, Bernhard and Kopetzky, Theodorich and Schewe, Klaus-Dieter},
+  address   = {Cham},
+  isbn      = {978-3-319-30496-0},
+  abstract  = {In the Introduction, we motivate the increasing need for extending current approaches to business process modelling. We give an outline of the book and briefly introduce our chief contributions---deontic classifications of tasks, actor modelling, user interaction modelling, enhanced communication modelling, and the integration of all these aspects together with classical process modelling, including a respective architecture for tool support. We also give an overview over the state of the art and compare the most important methods and languages with our own approach.},
+  booktitle = {Hagenberg Business Process Modelling Method},
+  doi       = {10.1007/978-3-319-30496-0_1},
+  url       = {https://doi.org/10.1007/978-3-319-30496-0_1},
+}
+
+@InBook{Unterstein2013,
+  pages     = {75--86},
+  title     = {UML},
+  publisher = {Springer Berlin Heidelberg},
+  year      = {2013},
+  author    = {Unterstein, Michael and Matthiessen, G{\"u}nter},
+  address   = {Berlin, Heidelberg},
+  isbn      = {978-3-642-39003-6},
+  abstract  = {Wir haben in Band 1 das Entity Relationship Modell (ERM) als Methode zum konzeptuellen Datenbankentwurf vorgestellt. Hierbei werden die Datenobjekte einer bestehenden oder zu entwickelnden Datenbank in einer von der Implementierung abstrahierenden Weise als Entit{\"a}tstypen und Entit{\"a}tsmengen und deren Beziehungen dargestellt.},
+  booktitle = {Anwendungsentwicklung mit Datenbanken},
+  doi       = {10.1007/978-3-642-39003-6_5},
+  url       = {https://doi.org/10.1007/978-3-642-39003-6_5},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
