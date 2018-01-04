@@ -140,9 +140,17 @@ urlcolor=cyan % Farbe der URLs
 % Angabe in eckigen Klammern sollte das längste Acronym enthalten.
 % Das ist notwendig damit sich der Einschub am längsten Acronym orientiert.
 \begin{acronym}[header=Abkürzungsverzeichnis]
+	\acro{bpd}[BPD]{Business Process Diagram}
+	\acro{bpel}[BPEL]{Business Process Execution Language}
+	\acro{bpm}[BPM]{Business Process Management}
 	\acro{bpmn}[BPMN]{Business Process Model and Notation}
+	\acro{bpmn4cps}[BPMN4CPS]{Business Process Model and Notation for Cyber-Physical Systems}
+	\acro{cmmn}[CMMN]{Case Management Model and Notation}
 	\acro{eoi}[EoI]{Entity of Interest}
 	\acro{iot}[IoT]{Internet of Things}
+	\acro{iota}[IoT-A]{Internet of Things - Architecture}
+	\acro{omg}[OMG]{Object Management Group}
+	\acro{uml}[UML]{Unified Modelling Language}
 \end{acronym}
 
 \clearpage
@@ -179,7 +187,7 @@ der neuen Geschäftsprozesse jedoch schwierig, da Standards wie
 wird dies dadurch, dass keine klare Abgrenzung zwischen dem
 eigentlichen Geschäftsprozess und dem Sammeln, Aggregieren und
 Auswerten der Daten besteht. Diese Fragestellungen bilden die
-Grundlage für diese Thesis
+Grundlage für diese Thesis.
 
 \subsection{Zielsetzung}
 Ziel der Thesis ist die Konzeption eines Modellierungsansatzes für \ac{iot}
@@ -187,8 +195,8 @@ Workflows. Hierfür werden Grundlegende Besonderheiten von \ac{iot} Workflows fe
 
 \subsection{Aufbau der Thesis}
 Nach der Einleitung mit Motivation, Problemstellung, Zielsetzung
- sowie dem Aufbau der Thesis folgen Grundlagen im Bereich der Prozess Modellierung, 
- des Internet of Things, des Business Process Managements sowie der Internet of Things Architektur, welche zum Verständnis der weiteren Arbeit dienen.
+ sowie dem Aufbau der Thesis folgen Grundlagen im Bereich des \ac{iot}, der Prozess Modellierung, 
+  des \ac{bpm}, der \ac{iota} sowie der \ac{bpmn4cps}, welche zum Verständnis der weiteren Arbeit dienen.
  
  Im Hauptteil werden typische Muster von \ac{iot} Workflows festgelegt. Aus den festgelegten Workflows werden Unterschiede und Besonderheiten zwischen \ac{iot} Workflows und Workflows ohne \ac{iot} Integration herausgearbeitet, welche bei der Modellierung zu berücksichtigen sind.
  Anhand der Unterschiede werden Evaluierungskriterien für die Geschäftsprozess Modellierung abgeleitet. Diese Evaluierungskriterien werden im Anschluss dazu verwendet um bestehende Modellierungsmethoden auf ihre Eignung zur Modellierung von \ac{iot} Workflows zu bewerten. Basierend auf der Bewertung wird ein Modellierungskonzept für \ac{iot} Workflows festgelegt. Im Anschluss daran werden ein oder mehrere Use-Cases analysiert und das Modellierungskonzept darauf angewandt. Anhand der Ergebnisse wird das Modellierungskonzept bewertet.
@@ -199,28 +207,36 @@ Im Schlussteil wird das Ergebnis festgehalten, ein Fazit getroffen und weiterfü
 
 \section{Grundlagen} \label{sec:section2}
 
-In diesem Kapitel werden zunächst Grundlagen des Internet of Things erläutert. Anschließend werden die wichtigsten Prozess Modellierungsmethoden dargestellt und Grundlagen des Business Process Managements erklärt. Zum Abschluss werden zwei Erweiterungen von BPMN zur Modellierung von IoT Workflows vorgestellt.
+In diesem Kapitel werden zunächst Grundlagen des \ac{iot} erläutert. Anschließend werden die wichtigsten Prozess Modellierungsmethoden dargestellt und Grundlagen des \ac{bpm} erklärt. Zum Abschluss werden zwei Erweiterungen von \ac{bpmn} zur Modellierung von \ac{iot} Workflows vorgestellt.
 
 \subsection{Internet of Things}
 
 \subsection{Prozess Modellierung}
 
-In vielen heutigen Unternehmen unterstützen Informationssysteme nicht mehr nur das Geschäft,sondern sie werden immer mehr zu einem integralen Bestandteil davon. Alle Unternehmen machen einen gewissen Gebrauch von Informationstechnologie, und es ist wichtig, dass ihre Systeme wirklich so aufgebaut sind, dass sie die Unternehmen unterstützen in denen sie zum Einsatz kommen. Das Geschäft bestimmt letztlich die Anforderungen, welche an die Informationssysteme definieren. Die Entwicklung von Software ohne ein angemessenes Verständnis des Kontextes, in welchem diese Software betrieben werden soll, ist nahezu unmöglich. Um ein solches Verständnis zu erlangen, ist es unerlässlich, dass man
-ein Geschäftsmodell definiert. Ein Modell ist eine vereinfachte Sicht auf eine
+In vielen heutigen Unternehmen unterstützen Informationssysteme nicht mehr nur das Geschäft,sondern sie werden immer mehr zu einem integralen Bestandteil davon. Alle Unternehmen machen einen gewissen Gebrauch von Informationstechnologie, und es ist wichtig, dass ihre Systeme wirklich so aufgebaut sind, dass sie die Unternehmen unterstützen in denen sie zum Einsatz kommen. Das Geschäft bestimmt letztlich die Anforderungen, welche an die Informationssysteme definieren. Die Entwicklung von Software ohne ein angemessenes Verständnis des Kontextes, in welchem diese Software betrieben werden soll, ist nahezu unmöglich. Um ein solches Verständnis zu erlangen, ist es unerlässlich, dass man ein Geschäftsmodell definiert. Ein Modell ist eine vereinfachte Sicht auf eine
 komplexe Realität. Diese Abstraktion erlaubt es irrelevante Details zu vernachlässigen und den Fokus auf die Kernelemente zu legen. Effektive Modelle erleichtern zudem
-Diskussionen zwischen verschiedenen Stakeholdern im Unternehmen,
-Sie ermöglichen es ihnen, sich auf die wichtigsten Grundlagen zu einigen und auf gemeinsame Ziele hinzuarbeiten. Die Modellierung von Geschäftsprozessen ist als Mittel zur Analyse und zum Design von Software akzeptiert und etabliert. Die sich ständig weiterentwickelnden Modelle helfen den Entwicklern auch dabei, ihr Denken zu strukturieren und zu fokussieren. Die Arbeit mit den Modellen dient ihnen zum Verständnis für das Geschäft und erhöht dadurch   das Bewusstsein für neue Möglichkeiten zur Verbesserung des Geschäfts.
+Diskussionen zwischen verschiedenen Stakeholdern im Unternehmen.
+Sie ermöglichen es ihnen, sich auf die wichtigsten Grundlagen zu einigen und auf gemeinsame Ziele hinzuarbeiten. Die Modellierung von Geschäftsprozessen ist als Mittel zur Analyse und zum Design von Software akzeptiert und etabliert. Die sich ständig weiterentwickelnden Modelle helfen den Entwicklern auch dabei, ihr Denken zu strukturieren und zu fokussieren. Die Arbeit mit den Modellen dient ihnen zum Verständnis für das Geschäft und erhöht dadurch  das Bewusstsein für neue Möglichkeiten zur Verbesserung des Geschäfts.
 
 \subsubsection{BPMN}
 
-\ac{bpmn} ist ein Standard für die Geschäftsprozessmodellierung, der eine grafische Notation zur Spezifikation von Geschäftsprozessen in einem Business Process Diagram (BPD),2 auf der Grundlage traditioneller Flussdiagrammtechniken bereitstellt. Das Ziel von \ac{bpmn} ist es, die Geschäftsprozessmodellierung sowohl für technische Anwender als auch für Geschäftsanwender zu unterstützen, indem eine Notation bereitgestellt wird, die für Geschäftsanwender intuitiv ist und dennoch komplexe Prozesssemantik abbilden kann. Die \ac{bpmn} 2.0-Spezifikation bietet auch Ausführungssemantik sowie das Mapping zwischen den Grafiken der Notation und anderen Ausführungssprachen, insbesondere der Business Process Execution Language.
-(BPEL).3 \ac{bpmn} ist so konzipiert, dass es für alle Beteiligten leicht verständlich ist.
-Dazu gehören die Business-Analysten, welche die Prozesse erstellen und verfeinern, die technischen Entwickler, welche für die Implementierung zuständig sind sowie Geschäftsleiter welche Prozesse überwachen und verwalten. Somit dient \ac{bpmn} zur Überbrückung der häufig auftretenden Kommunikationslücke zwischen Geschäftsprozessen
-Design und Umsetzung. Im Anhang befindet sich ein Übersicht über die wichtigsten Modellierungsmethoden von \ac{bpmn}
-//Quelle: $http://www.omg.org/news/whitepapers/Business_Process_Model_and_Notation.pdf$
+\ac{bpmn} ist ein Standard für die Geschäftsprozessmodellierung, der eine grafische Notation zur Spezifikation von Geschäftsprozessen in einem \ac{bpd} auf Grundlage traditioneller Flussdiagrammtechniken bereitstellt \cite[S.222]{Aagesen2015} 
+. Das Ziel von \ac{bpmn} ist es, die Geschäftsprozessmodellierung sowohl für technische Anwender als auch für Geschäftsanwender  zugänglich zu machen. Hierfür wird eine Notation bereitgestellt wird, welche für Geschäftsanwender intuitiv ist und dennoch komplexe Prozesssemantik abbilden kann. Die seit 2011 von der \ac{omg} vorgestellte \ac{bpmn} 2.0-Spezifikation bietet auch Ausführungssemantik sowie das Mapping zwischen den Grafiken der Notation und anderen Ausführungssprachen, insbesondere der \ac{bpel}. \ac{bpmn} ist so konzipiert, dass es für alle Beteiligten leicht verständlich ist.
+Zu den Anwendern gehören Business-Analysten, welche die Prozesse erstellen und verfeinern, technische Entwickler, die für die Implementierung zuständig sind sowie Geschäftsleiter welche Prozesse überwachen und verwalten. Im Anhang befindet sich ein Poster mit einer Übersicht über die wichtigsten Modellierungsmethoden von \ac{bpmn}. 
+%Quelle: http://www.omg.org/news/whitepapers/Business_Process_Model_and_Notation.pdf
 
+Aufgrund der fehlenden Möglichkeit Flexibilität abzubilden weshalb 2014 von der \ac{omg} ein eigener Standard \ac{cmmn} verabschiedet wurde. Als Case wird eine Aktivität bezeichnet, welche sich nicht einfach wiederholen lässt. Cases sind  von sich entwickelnden Umständen oder von Ad-hoc-Entscheidungen von Wissensarbeitern in Bezug auf  bestimmte Situationen abhängig. Zu den Anwendungsfällen des Case Managements gehören die Lizenzierung und Genehmigung in der Regierung, die Antrags- und Schadensbearbeitung in der Versicherungsbranche, der Patientenversorgung sowie der medizinischen Diagnose im Gesundheitswesen,
+Hypothekenbearbeitung im Bankwesen, Problemlösung in Call Centern, Vertriebs- und Betriebsplanung,, Wartung und Reparatur von Maschinen und Anlagen sowie der Konstruktion von Sonderanfertigungen.
+%Quelle: http://www.omg.org/spec/CMMN/1.1/PDF
+
+Laut Heise sei die Kombination von \ac{cmmn} und \ac{bpmn} sinnvoll um sowohl strukturierte als auch unstrukturierte Prozesse oder Teilprozesse sinnvoll abbilden zu können.
+%Quelle: https://www.heise.de/developer/artikel/Case-Management-und-CMMN-fuer-Entwickler-2569883.html?seite=all
 
 \subsubsection{UML}
+
+ \ac{uml} ist eine grafische Sprache, die die Artefakte verteilter Objektsysteme visualisiert, spezifiziert, konstruiert und dokumentiert \cite{Kleuker}. Es ist der am weitesten verbreitete Standard für Software-Architekten, um Geschäftsanwendungen zu spezifizieren. \ac{uml} wird vor allem für die objektorientierte Softwareentwicklung im Bereich des Software-Engineerings eingesetzt.
+Die \ac{uml} wurde in den 90er Jahren als Modellierungssprache und Methodik zur Unterstützung der objektorientierten Programmierung entwickelt. Im Jahr 1997 wurde es als Standard von der \ac{omg} übernommen. Die ersten Versionen 1.X wurden 2005 durch die neu überarbeiteten Versionen 2.X ersetzt. Seit Juni 2015 befindet sich UML in der Version 2.5. Im Zuge dieser Thesis wird \ac{uml} lediglich im Bezug auf Prozessmodellierung mit Aktivitätsdiagrammen verwendet. 
+
 
 \subsubsection{Geschäftsregeln}
 
@@ -232,7 +248,6 @@ Design und Umsetzung. Im Anhang befindet sich ein Übersicht über die wichtigst
 
 \newpage
 
-
 \section{IoT Workflows}
 
 \subsection{Typische Muster und Best Practices von IoT Workflows}
@@ -243,7 +258,7 @@ Design und Umsetzung. Im Anhang befindet sich ein Übersicht über die wichtigst
 
 \subsection{Bewertung der Modellierungsmethoden}
 
-\subsection{ Modellierungskonzept}
+\subsection{Modellierungskonzept}
 
 \newpage
 
