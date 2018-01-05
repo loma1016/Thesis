@@ -169,25 +169,15 @@ urlcolor=cyan % Farbe der URLs
 \section{Einleitung} \label{sec:section}
 
 \subsection{Motivation} \label{sec:subsection}
-Das \ac{iot} ist eines der größten IT-Buzzwords
-der letzten Jahre und und beschreibt die durch eingebettete Elektronik ermöglichte Vernetzung von physischen Dingen
-Die dadurch gewonnen Ereignisse bzw. Daten bieten neben dem Potential der
-Prozessoptimierung und Erweiterung noch die Möglichkeit zur
-Generierung völlig neuer Geschäftsprozesse und Modelle. 
-Das Weiteren sinken die Kosten dafür physische Dinge mit Sensoren
-auszustatten und untereinander zu vernetzen, was zu einem hohen
-Andrang an \ac{iot} Projekten führt. Laut Gartner sollen im Jahr 2020
-mehr als die Hälfte der wichtigsten Geschäftsprozess Elemente des \ac{iot}
-beinhalten. 
+Das \ac{iot} ist eines der größten IT-Buzzwords der letzten Jahre und und beschreibt die durch eingebettete Elektronik ermöglichte Vernetzung von physischen Dingen. Die dadurch gewonnen Ereignisse bzw. Daten bieten neben dem Potential der
+Prozessoptimierung und Erweiterung noch die Möglichkeit zur Generierung völlig neuer Geschäftsprozesse und Modelle. 
+Das Weiteren sinken die Kosten dafür physische Dinge mit Sensoren auszustatten und untereinander zu vernetzen, was zu einem hohen Andrang an \ac{iot} Projekten führt. Laut Gartner sollen im Jahr 2020 mehr als die Hälfte der wichtigsten Geschäftsprozess Elemente des \ac{iot} beinhalten.
+%Quelle Gartner
+ Da der Wettbewerb auf dem Technologiemarkt rasant zu nimmt, ist es unerlässlich  sich von der Konkurrenz abzuheben. Die Verwaltung von Smart Devices mit \ac{bpm} ermöglicht eine einfache Wartung ihrer Orchestrierung. Des weiteren bietet es auch den Aspekt der Nachverfolgung, die es ermöglicht KPIs über die Prozesse und Devices einfach zu ermitteln. Diese KPIs sind maßgebend für die Entscheidung, wie man Schwarm von Objekten am besten bedienen können sind.
+%Quelle http://data-informed.com/bpm-of-things-the-next-generation-of-the-internet-of-things/
 
 \subsection{Problemstellung} 
-Häufig gestaltet sich die Darstellung und Modellierung
-der neuen Geschäftsprozesse jedoch schwierig, da Standards wie
-\ac{bpmn} nur bedingt hierfür geeignete Elemente vorsehen. Erschwert
-wird dies dadurch, dass keine klare Abgrenzung zwischen dem
-eigentlichen Geschäftsprozess und dem Sammeln, Aggregieren und
-Auswerten der Daten besteht. Diese Fragestellungen bilden die
-Grundlage für diese Thesis.
+Häufig gestaltet sich die Darstellung und Modellierung der neuen Geschäftsprozesse jedoch schwierig, da Standards wie \ac{bpmn} nur bedingt hierfür geeignete Elemente vorsehen. Außerdem nimmt die Anzahl der vernetzten Geräte von Tag zu Tag zu und bietet somit mehr Raum für mangelhafte oder fehlende Kommunikation zwischen den Geräten. Dieser Umstand erschwert eine Verwaltung von IoT Workflows ohne \ac{bpm} wesentlich. Diese Problemstellungen bilden die Grundlage für diese Thesis.
 
 \subsection{Zielsetzung}
 Ziel der Thesis ist die Konzeption eines Modellierungsansatzes für \ac{iot}
@@ -199,17 +189,51 @@ Nach der Einleitung mit Motivation, Problemstellung, Zielsetzung
   des \ac{bpm}, der \ac{iota} sowie der \ac{bpmn4cps}, welche zum Verständnis der weiteren Arbeit dienen.
  
  Im Hauptteil werden typische Muster von \ac{iot} Workflows festgelegt. Aus den festgelegten Workflows werden Unterschiede und Besonderheiten zwischen \ac{iot} Workflows und Workflows ohne \ac{iot} Integration herausgearbeitet, welche bei der Modellierung zu berücksichtigen sind.
- Anhand der Unterschiede werden Evaluierungskriterien für die Geschäftsprozess Modellierung abgeleitet. Diese Evaluierungskriterien werden im Anschluss dazu verwendet um bestehende Modellierungsmethoden auf ihre Eignung zur Modellierung von \ac{iot} Workflows zu bewerten. Basierend auf der Bewertung wird ein Modellierungskonzept für \ac{iot} Workflows festgelegt. Im Anschluss daran werden ein oder mehrere Use-Cases analysiert und das Modellierungskonzept darauf angewandt. Anhand der Ergebnisse wird das Modellierungskonzept bewertet.
+ Anhand der Unterschiede werden Evaluierungskriterien für die Geschäftsprozess Modellierung abgeleitet. Diese Evaluierungskriterien werden im Anschluss dazu verwendet um bestehende Modellierungsmethoden auf ihre Eignung zur Modellierung von \ac{iot} Workflows zu bewerten. Basierend auf der Bewertung wird ein Modellierungskonzept für \ac{iot} Workflows festgelegt. Infolge dessen werden ein oder mehrere Use-Cases analysiert und das Modellierungskonzept darauf angewandt. Anhand der Ergebnisse wird das Modellierungskonzept bewertet.
  
 Im Schlussteil wird das Ergebnis festgehalten, ein Fazit getroffen und weiterführende Arbeiten sowie ein Ausblick vorgestellt.
  
 \newpage
 
 \section{Grundlagen} \label{sec:section2}
-
 In diesem Kapitel werden zunächst Grundlagen des \ac{iot} erläutert. Anschließend werden die wichtigsten Prozess Modellierungsmethoden dargestellt und Grundlagen des \ac{bpm} erklärt. Zum Abschluss werden zwei Erweiterungen von \ac{bpmn} zur Modellierung von \ac{iot} Workflows vorgestellt.
 
 \subsection{Internet of Things}
+
+Die Idee eines "Internets der Dinge" hat seine Ursprünge in den Konzepten des Anfang der 90er Jahre von Mark Weiser skizzierten "Ubiquitous Computing". 
+%Quelle https://www.ics.uci.edu/~corps/phaseii/Weiser-Computer21stCentury-SciAm.pdf
+Grundgedanke des Ubiquitous Computing ist eine Erweiterung beliebiger physischer Gegenstände über ihre bestehende Form und Funktion hinaus durch mikroelektronische Komponenten \cite{237456}. Die so entstehenden "smarten" Gegenstände bilden, mit digitaler Logik, Sensorik und der Möglichkeit zur Vernetzung ausgestattet, ein Internet der Dinge. Der Begriff \acl{iot} wurde jedoch erst 1999 von Kevin Ashton im Zusammenhang eines globalen Netzwerks von Objekten welche mit RFID angereicht wurden verwendet. 
+Aus technischer Sicht steht hinter dem Internet der Dinge weniger eine einzelne Technologie oder eine spezifische Funktionalität als vielmehr ein Funktionsbündel, welches in seiner Gesamtheit eine neue Qualität der Informationsverarbeitung entstehen lässt.
+%Quelle Hot topics-ubiquitous computing
+
+\subsubsection{Smart Objects}
+ Zu den charakteristischen Eigenschaften smarter Objekte im erweiterten Internet zählen die in \ref{table:smartObjectsCharacteristics} sichtbaren Eigenschaften
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{@{}lL@{}} 
+		\toprule
+		Charakteristik & Erklärung 
+		\\ \midrule
+		Identifikation & Objekte im Internet der Dinge sind über ein Nummerierungsschema eindeutig identifizierbar. Die Identifikation ermöglicht die Verknüpfung des Objekts mit Diensten bzw. einem "Datenschatten", d.h. Informationen zu dem Objekt, die auf einem entfernten Server im Netz hinterlegt sind. 
+		\\ \hline
+		Kommunikation & Im Gegensatz zu herkömmlichen elektronischen Geräten verfügen Objekte im Internet der Dinge über die Möglichkeit zur Vernetzung mit Ressourcen im Netz oder sogar untereinander, um Daten und Dienste gegenseitig zu nutzen. 
+		\\ \hline
+		Lokalisierung & Smarte Objekte kennen ihren Aufenthaltsort oder sind für andere lokalisierbar, bspw. auf globaler Ebene durch GPS oder in Innenräumen durch Ultraschall 
+		\\ \hline
+		Speicher & Das Objekt verfügt über Speicherkapazität, so dass es bspw. Informationen über seine Vergangenheit oder Zukunft mit sich tragen kann
+		 \\ \hline
+		Aktuatorik & Objekte im Internet der Dinge können unter Umständen selbständig Entscheidungen ohne übergeordnete Planungsinstanz treffen, z.B. im Sinne eines Industriecontainers, der seinen Weg durch die Lieferkette selbst bestimmt
+		\\ \hline
+		Benutzerschnittstelle & Mit dem Aufgehen des Computers im physischen Gegenstand stellen sich auch neue Anforderungen an die Benutzeroberfläche, die meist nicht mehr durch Tasten und Displays realisiert werden kann. Vielmehr braucht es hier neuartige Benutzungsmetaphern analog der Maus und Fenstermetapher graphischer Benutzeroberflächen
+		\\ \hline
+		\bottomrule
+	\end{tabularx}
+	\caption{Charakteristiken von smarten Objekten}
+	\label{table:smartObjectsCharacteristics}
+\end{table}
+%Quelle http://www.enzyklopaedie-der-wirtschaftsinformatik.de/lexikon/informationssysteme/lexikon/technologien-methoden/Rechnernetz/Internet/Internet-der-Dinge/index.html
+
+\subsubsection{Domain Model}
 
 \subsection{Prozess Modellierung}
 
@@ -248,7 +272,9 @@ Die \ac{uml} wurde in den 90er Jahren als Modellierungssprache und Methodik zur 
 
 \newpage
 
-\section{IoT Workflows}
+\section{BPM und IoT}
+ \textbf{Zusammenfassen}:
+Obwohl IoT mittlerweile zum beliebten Schlagwort geworden ist, kämpfen viele immer noch mit dem Konzept, Prozesse auf IoT anzuwenden. BPM, in seinem Kern, nutzt den Workflow, um große Daten- und Informationsmengen zu verwalten, zu aktualisieren und zu verfolgen. Wenn zum Beispiel eine intelligente Uhr Daten von Ihrem Handgelenk empfängt, die sie dann an eine Fitness-Überwachungsapplikation überträgt, woher weiß sie dann, was sie mit diesen Informationen zu tun hat? Speichert es die Daten einfach in seinem Speicher? Schickt es die Daten an andere Anwendungen, die Ihre Gesundheit, Ihre Ernährung und Ihren Zeitplan für medizinische Besuche überwachen? Prozesse wie diese nutzen BPM, um intelligente Objekte und Anwendungen in der richtigen Reihenfolge zu verwalten. Das Volumen der Daten, mit denen wir täglich arbeiten, nimmt exponentiell zu, so dass es für uns eine absolute Notwendigkeit ist, diese Informationen mit Prozessen besser zu verwalten, die uns gut dienen. BPM erhöht den Wert des IoT durch die Verbindung von intelligenten Objekten. Dies wiederum erweitert ihre Integration und Orchestrierung. Da immer mehr Geräte angeschlossen werden und die IoT-Nutzung zunimmt, besteht eine größere Wahrscheinlichkeit für Chaos durch die schnelle Multiplikation einzelner Schnittstellen. Intelligente Geräte senden Informationen von einem angeschlossenen Gerät über eine API, um eine Antwort zu aktivieren. Die Antworten können in einem kompletten Prozess orchestriert werden, wobei nachfolgende Antworten wie z.B. das Öffnen einer Autotür oder der systematische Zugriff auf bestimmte Dateien aufgerufen werden. Die Integration von BPM ermöglicht es, viele Dinge innerhalb des IoT richtig und nahtlos zusammen zu managen.
 
 \subsection{Typische Muster und Best Practices von IoT Workflows}
 
