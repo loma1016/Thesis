@@ -130,7 +130,136 @@
   month    = {Oct},
   issn     = {0018-9162},
   doi      = {10.1109/2.237456},
-  keywords = {microcomputers;personal computing;technological forecasting;computing access;personal computer;personal computing;ubiquitous computing;unobtrusive technology;Application software;Computer displays;Computer networks;Hardware;Information technology;Personal digital assistants;Pervasive computing;Portable computers;Protocols;Ubiquitous computing},
+  keywords = {microcomputers;personal computing;technological forecasting;computing access;personal computer;personal computing;ubiquitous computing;unobtrusive technology;Application software;Computer displays;Computer networks;Hardware;Information technology;Personal digital assistants;Pervasive computing;Portable computers;Protocols;Ubiquitous computing, rank1},
+}
+
+@Article{iotmeetsbpm,
+  author        = {Christian Janiesch and Agnes Koschmider and Massimo Mecella and Barbara Weber and Andrea Burattin and Claudio {Di Ciccio} and Avigdor Gal and Udo Kannengiesser and Felix Mannhardt and Jan Mendling and Andreas Oberweis and Manfred Reichert and Stefanie Rinderle{-}Ma and WenZhan Song and Jianwen Su and Victoria Torres and Matthias Weidlich and Mathias Weske and Liang Zhang},
+  title         = {The Internet-of-Things Meets Business Process Management: Mutual Benefits and Challenges},
+  journal       = {CoRR},
+  year          = {2017},
+  volume        = {abs/1709.03628},
+  archiveprefix = {arXiv},
+  bibsource     = {dblp computer science bibliography, http://dblp.org},
+  biburl        = {http://dblp.org/rec/bib/journals/corr/abs-1709-03628},
+  eprint        = {1709.03628},
+  keywords      = {rank1},
+  timestamp     = {Thu, 05 Oct 2017 09:42:59 +0200},
+  url           = {http://arxiv.org/abs/1709.03628},
+}
+
+@Article{haller2010things,
+  author   = {Haller, Stephan},
+  title    = {The things in the internet of things},
+  journal  = {Poster at the (IoT 2010). Tokyo, Japan, November},
+  year     = {2010},
+  volume   = {5},
+  number   = {8},
+  pages    = {26--30},
+  keywords = {rank1},
+}
+
+@Online{cmmnheise,
+  author  = {Bernd Rücker},
+  title   = {Case Management und CMMN für Entwickler},
+  year    = {2015},
+  url     = {https://www.heise.de/developer/artikel/Case-Management-und-CMMN-fuer-Entwickler-2569883.html?seite=all},
+  urldate = {2017-11-22},
+}
+
+@Online{bpmofthings,
+  author   = {Phillipe Ozil},
+  title    = {BPM of Things: the Next Generation of the Internet of Things},
+  year     = {2015},
+  url      = {http://data-informed.com/bpm-of-things-the-next-generation-of-the-internet-of-things/},
+  urldate  = {2017-12-12},
+  keywords = {rank1},
+}
+
+@Online{omguml,
+  author  = {Object Management Group},
+  title   = {OMG Unified Modeling Language (OMG UML) Version 2.5},
+  year    = {2015},
+  url     = {http://www.omg.org/spec/UML/2.5/PDF},
+  urldate = {2017-12-18},
+}
+
+@Online{ucweiser,
+  author   = {Mark Weiser},
+  title    = {The Computer for the 21st Century},
+  year     = {1991},
+  url      = {https://www.ics.uci.edu/~corps/phaseii/Weiser-Computer21stCentury-SciAm.pdf},
+  urldate  = {2017-12-11},
+  keywords = {rank1},
+}
+
+@Online{iotvorlesung,
+  author  = {Prof. Dr. Gregor Schiele},
+  title   = {Das Internet der Dinge Im Rahmen der Ringvorlesung Industrie 4.0 SS 2016, Universität zu Köln},
+  year    = {2016},
+  url     = {http://butler.aifb.kit.edu/web/industrie40/wp-content/uploads/sites/5/2016/05/IoT_SchieleGregor.pdf},
+  urldate = {2017-12-25},
+}
+
+@Online{rfidiot,
+  author   = {Kevin Ashton},
+  title    = {That 'Internet of Things' Thing},
+  year     = {2009},
+  url      = {http://www.rfidjournal.com/articles/view?4986},
+  urldate  = {2017-12-18},
+  keywords = {rank1},
+}
+
+@Online{garnteriotgrowth,
+  author   = {Egham},
+  title    = {Gartner Says 8.4 Billion Connected "Things" Will Be in Use in 2017, Up 31 Percent From 2016},
+  year     = {2017},
+  url      = {https://www.gartner.com/newsroom/id/3598917},
+  urldate  = {2017-12-11},
+  keywords = {rank1},
+}
+
+@Online{iotwiki,
+  author   = {Prof. Dr. Elgar Fleisch},
+  title    = {Internet der Dinge - Technische Grundlagen},
+  year     = {2014},
+  url      = {http://www.enzyklopaedie-der-wirtschaftsinformatik.de/lexikon/informationssysteme/lexikon/technologien-methoden/Rechnernetz/Internet/Internet-der-Dinge/index.html},
+  urldate  = {2017-12-11},
+  keywords = {rank1},
+}
+
+@InCollection{vonRosing2015433,
+  author    = {Mark von Rosing and Stephen White and Fred Cummins and Henk de Man},
+  title     = {Business Process Model and Notation—BPMN},
+  booktitle = {The Complete Business Process Handbook},
+  publisher = {Morgan Kaufmann},
+  year      = {2015},
+  editor    = {Rosing, Mark von and Scheer, August-Wilhelm and Scheel, Henrik von},
+  pages     = {433 - 457},
+  address   = {Boston},
+  isbn      = {978-0-12-799959-3},
+  doi       = {https://doi.org/10.1016/B978-0-12-799959-3.00021-5},
+  keywords  = {BPD, BPEL, BPMI, Process notations, BPMN, BPMN 2.0, OMG, rank1},
+  url       = {https://www.sciencedirect.com/science/article/pii/B9780127999593000215},
+}
+
+@Online{iotdefinition,
+  author   = {International Telecommunication Union},
+  title    = {Overview of the Internet of things},
+  year     = {2012},
+  url      = {https://www.itu.int/rec/T-REC-Y.2060-201206-I},
+  urldate  = {2017-12-28},
+  keywords = {rank1},
+}
+
+@Online{cmmnomg,
+  author  = {Object Management Group},
+  title   = {Case Management Model and Notation},
+  year    = {2016},
+  url     = {http://www.omg.org/spec/CMMN/1.1/PDF},
+  urldate = {2018-01-16},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
+
+@Comment{jabref-entrytype: Online: req[author;title;year;url;urldate] opt[]}
