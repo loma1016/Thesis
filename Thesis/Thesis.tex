@@ -140,6 +140,7 @@ urlcolor=cyan % Farbe der URLs
 % Angabe in eckigen Klammern sollte das längste Acronym enthalten.
 % Das ist notwendig damit sich der Einschub am längsten Acronym orientiert.
 \begin{acronym}[header=Abkürzungsverzeichnis]
+	\acro{arm}[ARM]{Architectural Reference Model}
 	\acro{bpd}[BPD]{Business Process Diagram}
 	\acro{bpel}[BPEL]{Business Process Execution Language}
 	\acro{bpm}[BPM]{Business Process Management}
@@ -253,7 +254,7 @@ Da es unter der Buzzword \ac{iot} sehr viele unterschiedlich Auffassungen und In
 \begin{figure}[H]
 	\includegraphics[height=10 cm,keepaspectratio,center]{figures/domainmodel}
 	\vspace{0.5cm}
-	\caption{Zusammenhang zwischen Thing, Device, Ressource und Service \cite{haller2010things}}
+	\caption{Zusammenhang zwischen Thing, Device, Resource und Service \cite{haller2010things}}
 	\label{domainmodel}
 \end{figure}
 
@@ -304,7 +305,7 @@ Laut Heise sei die Kombination von \ac{cmmn} und \ac{bpmn} sinnvoll um sowohl st
 \subsubsection{UML}
 
  \ac{uml} ist eine grafische Sprache, die die Artefakte verteilter Objektsysteme visualisiert, spezifiziert, konstruiert und dokumentiert \cite{Kleuker}. Es ist der am weitesten verbreitete Standard für Software-Architekten, um Geschäftsanwendungen zu spezifizieren. \ac{uml} wird vor allem für die objektorientierte Softwareentwicklung im Bereich des Software-Engineerings eingesetzt.
-Die \ac{uml} wurde in den 90er Jahren als Modellierungssprache und Methodik zur Unterstützung der objektorientierten Programmierung entwickelt. Im Jahr 1997 wurde es als Standard von der \ac{omg} übernommen. Die ersten Versionen 1.X wurden 2005 durch die neu überarbeiteten Versionen 2.X ersetzt. Seit März 2015 befindet sich UML in der Version 2.5 \cite{omguml}. \ac{uml} bietet im Gegenteil zu \ac{bpmn} mehr als nur die reine Prozessmodellierung und ist ihrer Gesamtheit sehr Umfangreich. Die Spezifikation allein ist über eintausend Seiten lang. Strukturiert wird \ac{uml} in vier Gruppen, den  Strukturdiagrammen, den Architekturdiagrammen, den Verhaltensdiagrammen und den Kommunikationsdiagrammen%TODO Quelle modellierungsvorlesung kapitel 1.1.
+Die \ac{uml} wurde in den 90er Jahren als Modellierungssprache und Methodik zur Unterstützung der objektorientierten Programmierung entwickelt. Im Jahr 1997 wurde es als Standard von der \ac{omg} übernommen. Die ersten Versionen 1.X wurden 2005 durch die neu überarbeiteten Versionen 2.X ersetzt. Seit März 2015 befindet sich UML in der Version 2.5 \cite{omguml}. \ac{uml} bietet im Gegenteil zu \ac{bpmn} mehr als nur die reine Prozessmodellierung und ist ihrer Gesamtheit sehr Umfangreich. Die Spezifikation allein ist über eintausend Seiten lang. Strukturiert wird \ac{uml} in vier Gruppen, den  Strukturdiagrammen, den Architekturdiagrammen, den Verhaltensdiagrammen und den Kommunikationsdiagrammen %TODO Quelle modellierungsvorlesung kapitel 1.1.
 Im Zuge dieser Thesis wird \ac{uml} lediglich auf \ac{uml} Aktivitätsdiagramme im Bezug auf Prozessmodellierung eingegangen.
 
 \subsubsection{Geschäftsregeln}
@@ -313,13 +314,48 @@ Im Zuge dieser Thesis wird \ac{uml} lediglich auf \ac{uml} Aktivitätsdiagramme 
 
 \subsection{IoT - A}
 
+%TODO Translate Quelle: http://www.meet-iot.eu/iot-a-explanation.html
+\acl{iota} kann als eine Art Leuchtturmprojekt der Europäischen Union angesehen werden, welches 2013 nach über drei Jahren zu Ende ging. Ziel hierbei war es ein \ac{arm} als Grundlage für das \ac{iot} zu erstellen. Die Grundidee hierbei war, dass das \ac{arm} eine gemeinsame Struktur sowie Richtlinien für den Umgang mit Kernaspekten der Entwicklung, Nutzung und Analyse von \ac{iot}-Systemen bereitstellt, was eine nahtlose Integration heterogener \ac{iot}-Technologien in eine kohärente Architektur sowie den Zusammenschluss mit anderen Systemen des "Future Internet" ermöglicht \cite[S.17]{enablingthingstotalk}. Um dieses Ziel zu erreichen wurden einige detaillierte wissenschaftliche und technologische Zielsetzungen identifiziert welche innerhalb des Projektes behandelt werden\cite{meetiot}.
+\newline
+
+\textbf{Zielsetzungen}
+\\
+
+1. Bewertung bestehender IoT-Protokoll Suites und Ableitung von Mechanismen zur Erzielung einer durchgehenden Interoperabilität für eine nahtlose Kommunikation zwischen IoT-Geräten. Das IoT wird aus Geräten mit unterschiedlichen Kommunikationsstacks bestehen.\ac{iota} soll eine nahtlose Kommunikationsfluss zwischen heterogenen Geräten ermöglichen und dabei die Komplexität der End-to-End-Heterogenität vor dem Kommunikationsdienst verbergen.
+\\
+
+2. Entwicklung von Modellierungswerkzeugen und einer Beschreibungssprache für zielorientierte \ac{iot}-bewusste (Geschäfts-)Prozessinteraktionen, die es erlauben, ihre Abhängigkeiten für eine Vielzahl von Bereitstellungsmodellen auszudrücken.
+\\
+
+3. Ableitung von adaptiven Mechanismen für die verteilte Orchestrierung von \ac{iot}-Ressourcen-Interaktionen, die Selbst-*-Eigenschaften freilegen, um mit der komplexen Dynamik realer Umgebungen umzugehen. 
+\\
+
+4. Ganzheitliche Einbettung effektiver und effizienter Sicherheits- und Datenschutzmechanismen in \ac{iot}-Geräten sowie den von ihnen genutzten Protokollen und Diensten.
+\\
+
+5. Entwicklung einer neuartigen Auflösungsinfrastruktur (resolution infrastructure) für das \ac{iot}, die es ermöglichen soll, ein skalierbares zuweisen von \ac{iot}-Ressourcen, Entitäten der realen Welt und ihrer Assoziationen durchzuführen.
+\\
+
+6. Entwicklung von IoT-Geräteplattformkomponenten einschließlich der Gerätehardware und Laufzeitumgebung. Das \ac{iota} soll Schlüsselkomponenten entwickeln, die für die \ac{iot}-Geräteplattform erforderlich sind, auf der ein zukünftiges Internet der Dinge basieren wird. 
+\\
+
+7.Der Verbreitung und Nutzung der entwickelten architektonischen Grundladen beizutragen.
+\\
+
+Im Zuge dieser Thesis ist besonders das Ziel der Entwicklung von Modellierungswerkzeugen sowie einer Beschreibungssprache für zielorientierte \ac{iot} bewusste Prozessinteraktionen von Bedeutung auf welches im folgenden Kapitel genauer eingegangen wird. 
+
+\subsubsection{IoT- A Modellierunskonzept}
+
+\cite{iotawareprocesses}
+
+
 \subsection{BPMN4CPS}
 
 \newpage
 
 \section{BPM und IoT}		
 Obwohl IoT mittlerweile zum beliebten Schlagwort geworden ist, kämpfen viele immer noch mit dem Konzept, Prozesse auf IoT anzuwenden. BPM, in seinem Kern, nutzt den Workflow, um große Daten- und Informationsmengen zu verwalten, zu aktualisieren und zu verfolgen. Wenn zum Beispiel eine intelligente Uhr Daten von Ihrem Handgelenk empfängt, die sie dann an eine Fitness-Überwachungsapplikation überträgt, woher weiß sie dann, was sie mit diesen Informationen zu tun hat? Speichert es die Daten einfach in seinem Speicher? Schickt es die Daten an andere Anwendungen, die Ihre Gesundheit, Ihre Ernährung und Ihren Zeitplan für medizinische Besuche überwachen? Prozesse wie diese nutzen BPM, um intelligente Objekte und Anwendungen in der richtigen Reihenfolge zu verwalten. Das Volumen der Daten, mit denen wir täglich arbeiten, nimmt exponentiell zu, so dass es für uns eine absolute Notwendigkeit ist, diese Informationen in beziehungsweise mit Prozessen besser zu verwalten. BPM erhöht den Wert des IoT durch die Verbindung von intelligenten Objekten. Dies wiederum erweitert ihre Integration und Orchestrierung. Da immer mehr Geräte angeschlossen werden und die IoT-Nutzung zunimmt, besteht eine größere Wahrscheinlichkeit für Chaos, dass durch die schnelle Vervielfältigung einzelner Schnittstellen ausgelöst wird. Intelligente Geräte senden Informationen von einem angeschlossenen Gerät über eine API, um eine Antwort zu aktivieren. Die Antworten können in einem kompletten Prozess orchestriert werden, wobei nachfolgende Antworten wie z.B. das Öffnen einer Autotür oder der systematische Zugriff auf bestimmte Dateien aufgerufen werden. Die Integration von BPM ermöglicht es, viele Dinge innerhalb des IoT richtig und nahtlos zusammen zu managen \cite{bpmofthings} .
-% Bessere Stelle für Zitierung finden
+
 
 \subsection{Typische Muster und Best Practices von IoT Workflows}
 
