@@ -315,6 +315,35 @@
   urldate = {2018-01-10},
 }
 
+@Online{whatisbpm,
+  author   = {Nathaniel Palmer},
+  title    = {What is BPM?},
+  year     = {2014},
+  url      = {https://bpm.com/what-is-bpm},
+  urldate  = {2018-01-18},
+  keywords = {rank1},
+}
+
+@Online{aboutbpmcom,
+  author   = {Nathaniel Palmer},
+  title    = {About BPM.com},
+  year     = {2017},
+  url      = {https://bpm.com/about-us},
+  urldate  = {2018-01-18},
+  keywords = {rank1},
+}
+
+@InProceedings{4566972,
+  author    = {M. z. Muehlen and M. Indulska and G. Kamp},
+  title     = {Business Process and Business Rule Modeling: A Representational Analysis},
+  booktitle = {2007 Eleventh International IEEE EDOC Conference Workshop},
+  year      = {2007},
+  pages     = {189-196},
+  month     = {Oct},
+  doi       = {10.1109/EDOCW.2007.8},
+  keywords  = {business data processing;knowledge representation languages;Bunge-Wand-Weber representation theory;business process;business rule modeling;modeling languages;organizational policies;representational analysis;rule modeling languages;Conferences;Context modeling;Markup languages;Ontologies;Outsourcing;Performance analysis;Portfolios;Vocabulary},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
 
 @Comment{jabref-entrytype: Online: req[author;title;year;url;urldate] opt[]}

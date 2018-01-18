@@ -307,12 +307,29 @@
   keywords  = {rank1},
 }
 
-@Online{,
+@Online{meetiot,
   author  = {IoT - A},
   title   = {IoT-A, the EU lighthouse project on Internet of Things},
   year    = {2017},
   url     = {http://www.meet-iot.eu/iot-a-explanation.html},
   urldate = {2018-01-10},
+}
+
+@Online{whatisbpm,
+  author   = {Nathaniel Palmer},
+  title    = {What is BPM?},
+  year     = {2014},
+  url      = {https://bpm.com/what-is-bpm},
+  urldate  = {2018-01-18},
+  keywords = {rank1},
+}
+
+@Online{aboutbpmcom,
+  author  = {Nathaniel Palmer},
+  title   = {About BPM.com},
+  year    = {2017},
+  url     = {https://bpm.com/about-us},
+  urldate = {2018-01-18},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}

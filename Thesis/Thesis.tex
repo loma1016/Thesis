@@ -146,9 +146,11 @@ urlcolor=cyan % Farbe der URLs
 	\acro{bpm}[BPM]{Business Process Management}
 	\acro{bpmn}[BPMN]{Business Process Model and Notation}
 	\acro{bpmn4cps}[BPMN4CPS]{Business Process Model and Notation for Cyber-Physical Systems}
+	\acro{bpms}[BPMS]{Business Process Management System/Suite}
 	\acro{cmmn}[CMMN]{Case Management Model and Notation}
 	\acro{cps}[CPS]{Cyber-Physical Systems}
 	\acro{eoi}[EoI]{Entity of Interest}
+	\acro{iapmc}[IAPMC]{IoT-aware Process Modelling Concept}
 	\acro{iot}[IoT]{Internet of Things}
 	\acro{iota}[IoT-A]{Internet of Things - Architecture}
 	\acro{m2m}[M2M]{Machine-to-Machine}
@@ -172,8 +174,7 @@ urlcolor=cyan % Farbe der URLs
 
 \section{Einleitung} \label{sec:section}
 
-%TODO Irgendwo einbauen "Ein Workflow ist die informationstechnische Realisierung" Quelle: modelleriungsvorlesung kap 2.1
-eines Geschäftsprozesses
+%TODO Irgendwo einbauen "Ein Workflow ist die informationstechnische Realisierung eines Geschäftsprozesses" Quelle: modelleriungsvorlesung kap 2.1 
 
 \subsection{Motivation} \label{sec:subsection}
 Das \ac{iot} ist eines der größten IT-Buzzwords der letzten Jahre und beschreibt die durch eingebettete Elektronik ermöglichte Vernetzung von physischen Dingen. Die dadurch gewonnen Daten bzw. Ereignisse bieten neben dem Potential der
@@ -201,11 +202,12 @@ Im Schlussteil wird das Ergebnis festgehalten, ein Fazit getroffen und weiterfü
 In diesem Kapitel werden zunächst Grundlagen des \ac{iot} erläutert. Anschließend werden die wichtigsten Prozess Modellierungsmethoden dargestellt und Grundlagen des \ac{bpm} erklärt. Zum Abschluss werden zwei Erweiterungen von \ac{bpmn} zur Modellierung von \ac{iot} Workflows vorgestellt.
 
 \subsection{BPM}
-%TODO Übersetzten, ergänzen
-Business Process Management (BPM) is a discipline involving any combination of modeling, automation, execution, control, measurement and optimization of business activity flows, in support of enterprise goals, spanning systems, employees, customers and partners within and beyond the enterprise boundaries
+Laut der Defintion von bpm.com, der größten Internetseite im Bezug auf Artikel, Nachrichten, Forschung und Veröfftentlichungen für \ac{bpm} \cite{aboutbpmcom} versteht sich \ac{bpm} als: "eine Disziplin, die eine beliebige Kombination aus Modellierung, Automatisierung, Ausführung, Kontrolle, Messung und Optimierung von Geschäftsabläufen zur Unterstützung von Unternehmenszielen, übergreifenden Systemen, Mitarbeitern, Kunden und Partnern innerhalb und außerhalb der Unternehmensgrenzen umfasst"\cite{whatisbpm}
+Besonders muss hierbei zwischen den Begriffen \ac{bpms} und \ac{bpms} ansich unterschieden werden. \ac{bpm} ist eine Praktik und kein Produkt. \ac{bpms} ist ein Produkt und was in den Produkten angeboten wird hängt immer von Verkäufer des Produktes ab. \ac{bpms} sind dafür entworfen um \ac{bpm} zu unterstützen aber bieten darüber hinaus Funktionaltiät welche nichts mit \ac{bpm} an sich zu tun hat
 
-BPM is not a product - There is a category called “BPMS” which is a BPM Suite or BPM System.  Gartner has introduced a new product category called “intelligent BPMS.”   What is included depends very much on the vendor. 
-%Quelle:https://bpm.com/what-is-bpm
+\subsubsection{BPMS}
+
+\subsubsection{iBPMS}
 
 Intelligent BPM:
 As a result, we are now moving into a phase that some people are calling “Intelligent BPM Systems,” which is distinguished primarily by the concept of a “sense and respond” capability.   In this way we can see BPM software market in terms of three phases, with each building on the other.
@@ -214,7 +216,7 @@ As a result, we are now moving into a phase that some people are calling “Inte
 \subsection{Internet of Things}
 
 Die Idee eines Internets der Dinge hat seine Ursprünge in den Konzepten des Anfang der 90er Jahre von Mark Weiser skizzierten "Ubiquitous Computing "was er als nahtlose Einbindung von Computern in die reale Welt bezeichnet \cite{ucweiser}. 
-Grundgedanke des "Ubiquitous Computing" ist eine Erweiterung beliebiger physischer Gegenstände über ihre bestehende Form und Funktion hinaus durch mikroelektronische Komponenten \cite{237456}. Die so entstehenden"smarten" Gegenstände bilden, mit digitaler Logik, Sensorik und der Möglichkeit zur Vernetzung ausgestattet, ein Internet der Dinge. Der Begriff \acl{iot} selbst wurde jedoch erst 1999 von Kevin Ashton im Zusammenhang eines globalen Netzwerks von Objekten welche mit RFID angereicht wurden bei einer Präsentation bei Procter \& Gamble verwendet \cite{rfidiot}. Eine einheitliche Definition des \ac{iot} gibt es nicht, diese Thesis beruht auf der 2012 publizierten Definition aus "Overview of the IoT" der International Telecommunication Union. Diese definiert \ac{iot} als :"Eine globale Infrastruktur für die Informationsgesellschaft, die fortschrittliche Dienste ermöglicht, indem sie (physische und virtuelle) Dinge miteinander verbindet, die auf bestehenden und sich entwickelnden interoperablen Informations- und Kommunikationstechnologien basieren" \cite{iotdefinition}.
+Grundgedanke des "Ubiquitous Computing" ist eine Erweiterung beliebiger physischer Gegenstände über ihre bestehende Form und Funktion hinaus durch mikroelektronische Komponenten \cite{237456}. Die so entstehenden "smarten" Gegenstände bilden, mit digitaler Logik, Sensorik und der Möglichkeit zur Vernetzung ausgestattet, ein Internet der Dinge. Der Begriff \acl{iot} selbst wurde jedoch erst 1999 von Kevin Ashton im Zusammenhang eines globalen Netzwerks von Objekten welche mit RFID angereicht wurden bei einer Präsentation bei Procter \& Gamble verwendet \cite{rfidiot}. Eine einheitliche Definition des \ac{iot} gibt es nicht, diese Thesis beruht auf der 2012 publizierten Definition aus "Overview of the IoT" der International Telecommunication Union. Diese definiert \ac{iot} als :"Eine globale Infrastruktur für die Informationsgesellschaft, die fortschrittliche Dienste ermöglicht, indem sie (physische und virtuelle) Dinge miteinander verbindet, die auf bestehenden und sich entwickelnden interoperablen Informations- und Kommunikationstechnologien basieren" \cite{iotdefinition}.
 Aus technischer Sicht steht hinter dem Internet der Dinge weniger eine einzelne Technologie oder eine spezifische Funktionalität als vielmehr ein Funktionsbündel, welches in seiner Gesamtheit eine neue Qualität der Informationsverarbeitung entstehen lässt und somit neue Geschäftsmodelle ermöglicht.
 
 \subsubsection{Smart Objects}
@@ -252,7 +254,7 @@ Aus technischer Sicht steht hinter dem Internet der Dinge weniger eine einzelne 
 Da es unter der Buzzword \ac{iot} sehr viele unterschiedlich Auffassungen und Interpretation wie zum Beispiel das ursprüngliche Konzept Kevin Ashtons eines Netzwerkes um RFID angereicherte Objekte. Häufig ist auch von \ac{m2m} oder \ac{cps} die Rede. Bei dieser Vielzahl von Auffassungen und Begriffen ist es für ein allgemeines Verständnis unabdingbar sich auf eine Definition zu einigen. Im Zuge dieser Thesis wird das 2010 von Stephan Haller vorgestellte IoT Domain Model verwendet um den Zusammenhang zwischen Devices, Resourcen und Services zu erklären\cite{haller2010things}, da diese die am häufigsten verwendetet wurde in der Literatur auf welcher diese Thesis beruht. Die auf Seite \pageref{fig:domainmodel} zeigt eine auf den Zusammenhang von Device, Service und Ressourcen abstrahierte Darstellung des IoT Domain Models. Im Anhang befindet sich ein Schaubild des vollständigen IoT Domain Models Haller´s vom Stand 2013.
 
 \begin{figure}[H]
-	\includegraphics[height=10 cm,keepaspectratio,center]{figures/domainmodel}
+	\includegraphics[height=8 cm,keepaspectratio,center]{figures/domainmodel}
 	\vspace{0.5cm}
 	\caption{Zusammenhang zwischen Thing, Device, Resource und Service \cite{haller2010things}}
 	\label{domainmodel}
@@ -345,9 +347,43 @@ Im Zuge dieser Thesis wird \ac{uml} lediglich auf \ac{uml} Aktivitätsdiagramme 
 Im Zuge dieser Thesis ist besonders das Ziel der Entwicklung von Modellierungswerkzeugen sowie einer Beschreibungssprache für zielorientierte \ac{iot} bewusste Prozessinteraktionen von Bedeutung auf welches im folgenden Kapitel genauer eingegangen wird. 
 
 \subsubsection{IoT- A Modellierunskonzept}
+Innerhalb des \ac{iota} Projektes wurde ein Modellierungskonzept für \ac{iot} Prozesse entworfen. Dieses sogenannte \ac{iapmc} stellt eine Erweiterung um sieben neue Elemente dar welche sich in \ac{bpmn} integrieren lassen. Diese sieben Elemente werden im folgenden vorgestellt
+\newline
 
-\cite{iotawareprocesses}
+\textbf{1. Actuation Activity}
+\newline
+Als Aktuator wird ein physisches Bauteil bezeichnet welches elektronische Signale in mechanische Bewegungen oder andere physikalische Auswirkungen umsetzen kann. Ein Aktuator fürht also Tätigkeiten ganz oder nach vorgegeben Werten aus. Nach der erfolgreichen Durchführung einer "actuation activity" hat sich also der physische Zustand eines physischen Gegenstandes geändert. Innerhalb des \ac{iot} erfolgt die Interaktion mit den Softwarekomponenten solcher Aktoren durch Services innerhalb konkreter Prozesse, die über klar definierte Serviceschnittstellen verfügen. Funktionelle Eigenschaften der Actuation Activity sind, dass es einen Input Datensatz gib, jedoch keinen Output Datensatz. Es weder durch die Business Process Execition Engine gestartet noch gemanaged wird. Es besitzt eine genau definierte Schnittstelle und eine Verbindung zu einem Data Object beziehungsweise einem Data Store. Stellt einen Service bereit mit welchem der Zustand der physischen Entity geändert wird.
+\\
 
+\textbf{2. Sensing Activity}
+\newline
+Sensoren sind physische elemente welche Bewegungen oder physikalische Werte erfasst und in elektronische Singale umwandelt. In der \ac{iot} Welt ist ein Sensor in der Lage den Zustand einer phsischen Entität zu erfassen, dieses Erfassen den physischen Zustandes wird als "sensing" bezeichnet. Sensoren sind in gewisser Weise als Gegenstück zu den Aktoren zu verstehen, ein Aktor ändert den Zustand einer physischen Entität während der Sensor seinen Zustand misst und somit die Änderung seines Zustandes registrieren kann. Als Gegenstück zu den Aktoren haben "Sensing Activities" keinen Daten Input aber dafür einen Daten Output. Allerdings werden auch diese weder weder durch die Business Process Execition Engine gestartet noch gemanaged sondern werden durch eine standardisierte Schnittstelle bereitgestellt und besitzen Anbindung an ein Data Object beziehungsweise Store.
+\\
+
+\textbf{3. Process Resources}
+\newline
+text
+\\
+
+\textbf{4. Physical Entity}
+\newline
+text
+\\
+
+\textbf{5. Real World Data Object / Store}
+\newline
+text
+\\
+
+\textbf{6. Mobility Aspect}
+\newline
+text
+\\
+
+\textbf{7. IoT Process Ratios}
+\newline
+text
+\\
 
 \subsection{BPMN4CPS}
 
@@ -361,7 +397,23 @@ Obwohl IoT mittlerweile zum beliebten Schlagwort geworden ist, kämpfen viele im
 
 \subsection{Unterschiede IoT Workflows zu regulären Workflows}
 
+Unterschied, device ist neuer akteur im Workflow
+
+http://www.integra-co.com/sites/default/files/Bizagi%20on%20Gartner%20Quadrant%20-%20Reprint.pdf
+
 \subsection{Evaluierungskriterien}
+
+- Entity based concept: While the service is the central concept of business processes in enterprise systems like ERP following nowadays a SOA based approach, the Physical Entity, and its associated devices having resources and providing services using a web like structure, are a key concept in the IoT domain [58]. Physical Entities relate to the real-world “things” that a business process is interested in. Devices are hardware that is associated to a Physical Entity, e.g. a tachometer measuring the velocity of a car. Resources are computational elements, e.g. sensor software hosted on the sensor device. An IAPMC shall support the entity based concept, but in the same way it shall be still integrable with current industry modelling standards.
+- Distributed execution: In an enterprise environment the automated and semi-automated execution of a predefined and modelled business process is a huge benefit amongst many other leading to time and cost efficiency. In contrast to having one central process engine in one system, IoT-enabled processes would bring the possibility to distribute the process execution over many devices. An IAPMC shall support these distributed execution activities, while still supporting current business process engines following a one-device approach.
+- Interactions: Business processes in the IoT introduce two additional forms of interactions: First, the device interacts or associates to Physical Entities. Second, the services that are known by enterprise systems processes interact with the software components of devices. An IAPMC shall provide means for expressing those types of interactions during process design.
+- Distributed data: When business processes are realized in a nowadays enterprise system, often one central data storage is used. One potential of the IoT is the possibility to distribute data over several data storages. An IAPMC shall support arranging this distribution of data.
+- Scalability: In enterprise systems business processes mainly use one central service repository having a relative static number of services. The IoT characterizes that multiple Physical Entities and its associated Devices and therewith its services can appear constantly. Even the associations between Physical Entities and Devices may vary. The complexity of an IoT-aware business process shall be independent from the number of Physical Entities, Devices and services. The IAPMC shall support means to cover this complexity to modeller.
+Additionally, the growing number of Devices shall not influence the performance of the three process phases. Therefore, IAPMC shall support the definition of ratios.
+- Availability / Mobility: The availability of services in an enterprise system can be often considered as static. Due to the mobile nature of some Devices and Physical Entities participating in a defined business process, the availability of its related services might not be guaranteed throughout. This can affect the execution of a resolved business process in which an involved mobile Device or Physical Entity has become unavailable. The IAPMC shall support the disappearance and re-emergence of mobile process Devices or Physical Entities.
+- Fault tolerance: The availability of Devices in the IoT is uncertain. A business process relies on the presence and communication technology of a Device and its related services. Faults may result from the absence of Devices or its communication technology, while a business process still needs to be highly reliable. The IAPMC must support the fault tolerance of a business process.
+- Quality of Information: Within enterprise systems information can be mostly considered to be accurate. As Devices and its services providing, accessing and updating data with different levels of information accuracy may be involved in business process, the quality of an accessed data object may vary widely and its entropy can get uncertain. In order to deal with this difficulty, the IAPMC shall provide means to express the quality of information.
+
+\cite{iotawareprocesses}
 
 \subsection{Bewertung der Modellierungsmethoden}
 
@@ -371,6 +423,7 @@ Obwohl IoT mittlerweile zum beliebten Schlagwort geworden ist, kämpfen viele im
 
 \section{Evaluierung}
 
+%TODO use Cases: Max IoT Leasingrate, chris beispiel
 \newpage
 
 \section{Schlussteil}
