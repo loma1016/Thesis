@@ -150,7 +150,9 @@ urlcolor=cyan % Farbe der URLs
 	\acro{cmmn}[CMMN]{Case Management Model and Notation}
 	\acro{cps}[CPS]{Cyber-Physical Systems}
 	\acro{eoi}[EoI]{Entity of Interest}
+	\acro{eepk}[eEPK]{erweiterte Ereignisgesteuerte Prozesskette}
 	\acro{iapmc}[IAPMC]{IoT-aware Process Modelling Concept}
+	\acro{ibpms}[iBPMS]{intelligent Business Process Management System/Suite}
 	\acro{iot}[IoT]{Internet of Things}
 	\acro{iota}[IoT-A]{Internet of Things - Architecture}
 	\acro{m2m}[M2M]{Machine-to-Machine}
@@ -203,15 +205,46 @@ In diesem Kapitel werden zunächst Grundlagen des \ac{iot} erläutert. Anschlie�
 
 \subsection{BPM}
 Laut der Defintion von bpm.com, der größten Internetseite im Bezug auf Artikel, Nachrichten, Forschung und Veröfftentlichungen für \ac{bpm} \cite{aboutbpmcom} versteht sich \ac{bpm} als: "eine Disziplin, die eine beliebige Kombination aus Modellierung, Automatisierung, Ausführung, Kontrolle, Messung und Optimierung von Geschäftsabläufen zur Unterstützung von Unternehmenszielen, übergreifenden Systemen, Mitarbeitern, Kunden und Partnern innerhalb und außerhalb der Unternehmensgrenzen umfasst"\cite{whatisbpm}
-Besonders muss hierbei zwischen den Begriffen \ac{bpms} und \ac{bpms} ansich unterschieden werden. \ac{bpm} ist eine Praktik und kein Produkt. \ac{bpms} ist ein Produkt und was in den Produkten angeboten wird hängt immer von Verkäufer des Produktes ab. \ac{bpms} sind dafür entworfen um \ac{bpm} zu unterstützen aber bieten darüber hinaus Funktionaltiät welche nichts mit \ac{bpm} an sich zu tun hat
+Besonders muss hierbei zwischen den Begriffen \ac{bpms} und \ac{bpms} an sich unterschieden werden. \ac{bpm} ist eine Praktik und kein Produkt. \ac{bpms} ist ein Produkt und was in den Produkten angeboten wird hängt immer von Verkäufer des Produktes ab. \ac{bpms} sind dafür entworfen um \ac{bpm} zu unterstützen aber bieten darüber hinaus Funktionaltiät welche nichts mit \ac{bpm} an sich zu tun hat. Was genau die Kernfunktionalitäten eines \ac{bpms} sind wird im nächsten Unterkapitel beschrieben.
 
 \subsubsection{BPMS}
 
+Wie zuvor beschrieben sind \ac{bpms} dafür entworfen um die \ac{bpm} zu unterstützen folglich könne alle Informationssysteme, die sich mit der Definition, Verwaltung, Anpassung und Bewertung von Aufgaben befassen, die sich aus Geschäftsprozessen und Organisationsstrukturen ergeben als \ac{bpms} bezeichnen. Diese Produkte sind in der Lage, den Workflow in einer Organisation zu definieren, zu steuern, Daten zu übertragen und alte Informationssysteme, bestehende Programme und Programmmodule zu integrieren \cite{bpms}.
+
 \subsubsection{iBPMS}
 
-Intelligent BPM:
-As a result, we are now moving into a phase that some people are calling “Intelligent BPM Systems,” which is distinguished primarily by the concept of a “sense and respond” capability.   In this way we can see BPM software market in terms of three phases, with each building on the other.
-%Quelle: http://data-informed.com/what-big-data-means-to-bpm-more-event-sensors-process-simulations/
+\ac{ibpms} kann als natürliche Weiterentwicklung der \ac{bpms} verstanden werden und bietet durch zusätzliche Funktionen wie zum Beispiel die Integration mit Social Media, mobile Prozessaufgaben, Streaming-Analysen sowie Echtzeit-Entscheidungsmanagement mehr "Intelligenz" in Geschäftsprozessen \cite{onibpms}. 
+In Tabelle \ref{table:GartnerIBPMS} werden die von Gartner herausgearbeitet Kernfunktionalitäten aufgezeigt
+%TODO Tabelle muss über zwei Seiten angezeigt werden
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{@{}lL@{}} 
+		\toprule
+		\textbf{Funktionalität} & \textbf{Erklärung} 
+		\\ \midrule
+		Interaction Management & Die Fähigkeit, verschiedene Arten von Aktivitäten und Interaktionen zur Laufzeit zu orchestrieren, um die Arbeit zu unterstützen, die Menschen, Systeme und "Dinge" (wie im IoT) leisten, um spezifische Geschäftsergebnisse zu erzielen
+		\\ \hline
+		High-Productivity App Authoring & Ermöglicht  IT-Entwicklern, schnell und einfach eine prozessorientierte Anwendung zu erstellen.
+		Anwendungen, die auf der Plattform basieren, verwenden ein Metadatenmodell, um den gesamten Lebenszyklus von Geschäftsprozessen zu verwalten und prozessbezogene Daten zu manipulieren
+		\\ \hline
+		Monitoring and Business Alignment & iBPMS Plattformen unterstützen Business Activity Monitoring um den Status von Prozessinstanzen, Fällen und anderen Verhaltensweisen in nahezu Echtzeit kontinuierlich zu verfolgen.
+		\\ \hline
+		Rules and Decision Management &  Softwaresysteme - wie inference engines, recommendation engines und decision management capabilities -, die als Orientierungshilfe dienen, um menschliche oder automatisierte betriebliche Entscheidungen nach Geschäftsrichtlinien zu treffen
+		\\ \hline
+		Analytics & Wendet Logik und Statistiken auf Daten an, um Erkenntnisse für bessere Entscheidungen zu gewinnen. Ein \ac{ibpms} kann prädiktive Analysen wie z.B. Scoring Services oder präskriptive Analysen wie z.B. optimization engines enthalten oder mit diesen in Verbindung stehen
+		\\ \hline
+		Interoperability &  Interoperabilität mit externen Anwendungsdiensten und Systemen, die ein \ac{ibpms}-Adapter und Adapter-Entwicklungswerkzeuge ermöglichen. Zu diesen Diensten und Systemen gehören benutzerdefinierte und kommerzielle Standardanwendungen sowie Cloud-basierte SaaS-Anwendungen und deren Datenbanken.
+		\\ \hline
+		Intelligent Mobility & Die Möglichkeit, von einer Vielzahl mobiler Geräte, einschließlich Smartphones und Tablets, auf Anwendungen zuzugreifen. Die Plattform bietet nicht nur Zugriff von jedem Ort aus, sondern optimiert auch die nativen Fähigkeiten des Mobilgeräts, einschließlich der Kamera und anderer Sensoren
+		\\ \hline
+		Context and Behavior History & Die Fähigkeit der Plattform verkürzt die Zeit, welche benötigt wird, um Verhaltensweisen die zur Verbesserung der Geschäftsergebnisse erforderlich sind zu erkennen und zu optimieren. Dies kann die Analyse der vergangenen Ausführungshistorie oder die Simulation von Verhaltensvorschlägen beinhalten.
+		\\ \hline
+		\bottomrule
+	\end{tabularx}
+\caption{Kernfunktionalitäten eines iBPMS \cite{ibpms}}
+\label{table:GartnerIBPMS}
+\end{table}
+
+Auch wenn \ac{ibpms} Interaction Management als eine seiner Kernfunktionalitäten besitzen muss ist hier kein Standard für die Modellierung von \ac{iot} Workflows gegeben beziehungsweise vorgegeben sondern es bleibt jedem Vertreiber selbst überlassen wie die Worfklows zu modellieren sind.
 
 \subsection{Internet of Things}
 
@@ -249,13 +282,12 @@ Aus technischer Sicht steht hinter dem Internet der Dinge weniger eine einzelne 
 
 %TODO Tabelle über zwei seiten
 
-\subsubsection{Domain Model}
+\subsubsection{Domain Model}\label{sec:DomainModel}
 
 Da es unter der Buzzword \ac{iot} sehr viele unterschiedlich Auffassungen und Interpretation wie zum Beispiel das ursprüngliche Konzept Kevin Ashtons eines Netzwerkes um RFID angereicherte Objekte. Häufig ist auch von \ac{m2m} oder \ac{cps} die Rede. Bei dieser Vielzahl von Auffassungen und Begriffen ist es für ein allgemeines Verständnis unabdingbar sich auf eine Definition zu einigen. Im Zuge dieser Thesis wird das 2010 von Stephan Haller vorgestellte IoT Domain Model verwendet um den Zusammenhang zwischen Devices, Resourcen und Services zu erklären\cite{haller2010things}, da diese die am häufigsten verwendetet wurde in der Literatur auf welcher diese Thesis beruht. Die auf Seite \pageref{fig:domainmodel} zeigt eine auf den Zusammenhang von Device, Service und Ressourcen abstrahierte Darstellung des IoT Domain Models. Im Anhang befindet sich ein Schaubild des vollständigen IoT Domain Models Haller´s vom Stand 2013.
 
 \begin{figure}[H]
 	\includegraphics[height=8 cm,keepaspectratio,center]{figures/domainmodel}
-	\vspace{0.5cm}
 	\caption{Zusammenhang zwischen Thing, Device, Resource und Service \cite{haller2010things}}
 	\label{domainmodel}
 \end{figure}
@@ -272,7 +304,7 @@ Als attached/embedded Device stellen ähnlich wie die Umgebungsgeräte den Zusta
 \\
 
 \textbf{Device}: \\
-Das Device wird als Überklasse der "environmental Devices" sowie der "attached/ embedded Device" verstanden und stellt das virtuelle Gegenstück zum \ac{eoi} dar.
+Das Device wird als Überklasse der "environmental Devices" sowie der "attached/ embedded Device" verstanden es sammelt also Informationen über das \ac{eoi} und stellt diese über die Möglichkeit der Kommunikation mit IT-Systemen zur Verfügung.
 \\
 
 \textbf{Resource}: \\
@@ -312,11 +344,10 @@ Im Zuge dieser Thesis wird \ac{uml} lediglich auf \ac{uml} Aktivitätsdiagramme 
 
 \subsubsection{Geschäftsregeln}
 
-
+Geschäftsregeln an sich sind keine Modellierungsmethode allerdings lassen Geschäftsprozesse selbst als eine Reihe von Geschäftsregeln darstellen. Die unter bestimmten Bedingungen auszuführenden Aktivitäten und die sie auslösenden Ereignisse können in Beziehung zueinander gesetzt werden, so dass Prozesse auf der Grundlage von Geschäftsregeln beschrieben und ausgeführt werden können. Die Prozessmodellierung mit Geschäftsregeln basiert auf ECAA-Regeln. Durch die drei Konstrukte Ereignis, Bedingung und Aktion. Diese Art der Modellierung eignet sich jedoch nur für kleine Prozessmodelle und müssen für größere Modelle auf die \ac{eEPK} Notation übertragen werden \cite{businessrules}.
 
 \subsection{IoT - A}
 
-%TODO Translate Quelle: http://www.meet-iot.eu/iot-a-explanation.html
 \acl{iota} kann als eine Art Leuchtturmprojekt der Europäischen Union angesehen werden, welches 2013 nach über drei Jahren zu Ende ging. Ziel hierbei war es ein \ac{arm} als Grundlage für das \ac{iot} zu erstellen. Die Grundidee hierbei war, dass das \ac{arm} eine gemeinsame Struktur sowie Richtlinien für den Umgang mit Kernaspekten der Entwicklung, Nutzung und Analyse von \ac{iot}-Systemen bereitstellt, was eine nahtlose Integration heterogener \ac{iot}-Technologien in eine kohärente Architektur sowie den Zusammenschluss mit anderen Systemen des "Future Internet" ermöglicht \cite[S.17]{enablingthingstotalk}. Um dieses Ziel zu erreichen wurden einige detaillierte wissenschaftliche und technologische Zielsetzungen identifiziert welche innerhalb des Projektes behandelt werden\cite{meetiot}.
 \newline
 
@@ -347,30 +378,54 @@ Im Zuge dieser Thesis wird \ac{uml} lediglich auf \ac{uml} Aktivitätsdiagramme 
 Im Zuge dieser Thesis ist besonders das Ziel der Entwicklung von Modellierungswerkzeugen sowie einer Beschreibungssprache für zielorientierte \ac{iot} bewusste Prozessinteraktionen von Bedeutung auf welches im folgenden Kapitel genauer eingegangen wird. 
 
 \subsubsection{IoT- A Modellierunskonzept}
-Innerhalb des \ac{iota} Projektes wurde ein Modellierungskonzept für \ac{iot} Prozesse entworfen. Dieses sogenannte \ac{iapmc} stellt eine Erweiterung um sieben neue Elemente dar welche sich in \ac{bpmn} integrieren lassen. Diese sieben Elemente werden im folgenden vorgestellt
+Innerhalb des \ac{iota} Projektes wurde ein Modellierungskonzept für \ac{iot} Prozesse entworfen. Dieses sogenannte \ac{iapmc} stellt eine Erweiterung um sieben neue Elemente dar welche sich in \ac{bpmn} integrieren lassen  \cite{conceptsiotawarepm}. Diese sieben Elemente werden im folgenden vorgestellt
 \newline
 
-\textbf{1. Actuation Activity}
+\textbf{1.1. Actuation Activity}
 \newline
-Als Aktuator wird ein physisches Bauteil bezeichnet welches elektronische Signale in mechanische Bewegungen oder andere physikalische Auswirkungen umsetzen kann. Ein Aktuator fürht also Tätigkeiten ganz oder nach vorgegeben Werten aus. Nach der erfolgreichen Durchführung einer "actuation activity" hat sich also der physische Zustand eines physischen Gegenstandes geändert. Innerhalb des \ac{iot} erfolgt die Interaktion mit den Softwarekomponenten solcher Aktoren durch Services innerhalb konkreter Prozesse, die über klar definierte Serviceschnittstellen verfügen. Funktionelle Eigenschaften der Actuation Activity sind, dass es einen Input Datensatz gib, jedoch keinen Output Datensatz. Es weder durch die Business Process Execition Engine gestartet noch gemanaged wird. Es besitzt eine genau definierte Schnittstelle und eine Verbindung zu einem Data Object beziehungsweise einem Data Store. Stellt einen Service bereit mit welchem der Zustand der physischen Entity geändert wird.
+Als Aktuator wird ein physisches Bauteil bezeichnet welches elektronische Signale in mechanische Bewegungen oder andere physikalische Auswirkungen umsetzen kann. Ein Aktuator fürht also Tätigkeiten ganz oder nach vorgegeben Werten aus. Nach der erfolgreichen Durchführung einer "Actuation Activity" hat sich also der physische Zustand eines physischen Gegenstandes geändert. Innerhalb des \ac{iot} erfolgt die Interaktion mit den Softwarekomponenten solcher Aktoren durch Services innerhalb konkreter Prozesse, die über klar definierte Serviceschnittstellen verfügen. Funktionelle Eigenschaften der Actuation Activity sind, dass es einen Input Datensatz gib, jedoch keinen Output Datensatz. Es weder durch die Business Process Execition Engine gestartet noch gemanaged wird. Es besitzt eine genau definierte Schnittstelle und eine Verbindung zu einem Data Object beziehungsweise einem Data Store. Stellt einen Service bereit mit welchem der Zustand der physischen Entity geändert wird \cite[S.41]{conceptsiotawarepm}. In Abbildung \ref{fig:actuationtask} ist das fertige Model einer "Actuation Task" nach \ac{iapmc} zu sehen.
+
+\begin{figure}[H]
+	\includegraphics[height=3 cm,keepaspectratio,center]{figures/ActuationTask}
+	\caption{Actuation Task \cite[S.44]{conceptsiotawarepm}}
+	\label{fig:actuationtask}
+\end{figure} 
+
+\textbf{1.2. Sensing Activity}
+\newline
+Sensoren sind physische Elemente welche Bewegungen oder physikalische Werte erfasst und in elektronische Singale umwandelt. In der \ac{iot} Welt ist ein Sensor in der Lage den Zustand einer phsischen Entität zu erfassen, dieses Erfassen den physischen Zustandes wird als "sensing" bezeichnet. Sensoren sind in gewisser Weise als Gegenstück zu den Aktoren zu verstehen, ein Aktor ändert den Zustand einer physischen Entität während der Sensor seinen Zustand misst und somit die Änderung seines Zustandes registrieren kann. Als Gegenstück zu den Aktoren haben "Sensing Activities" keinen Daten Input aber dafür einen Daten Output. Allerdings werden auch diese weder weder durch die Business Process Execition Engine gestartet noch gemanaged sondern werden durch eine standardisierte Schnittstelle bereitgestellt und besitzen Anbindung an ein Data Object beziehungsweise Store \cite[S.45]{conceptsiotawarepm}. Der in Abbildung \ref{fig:sensingtask} ersichtliche Sachverhalt stellt den von der \ac{iapmc} entwickelten "Sensing Task" dar.
+
+\begin{figure}[H]
+	\includegraphics[height=3 cm,keepaspectratio,center]{figures/SensingTask}
+	\caption{Sensing Task \cite[S.49]{conceptsiotawarepm}}
+	\label{fig:sensingtask}
+\end{figure} 
+
+\textbf{3. IoT Device}
+\newline
+Wie in \ref{sec:DomainModel} beschrieben besitzt ein\ac{iot} Device die Fähigkeit den Status einer \ac{eoi} wahrzunehmen und mit einem Netzwerk zu kommunizieren. Des weiteren besitzt ein \ac{iot} Device im \ac{iota} Kontext die Möglichkeit aktiv den Status seiner physischen Entität oder einer anderen im \ac{iot} vorhandenen physischen Entität zu verändern. Mobiltelefone  ,ein Sensor-Knotenpunkt, ein einzelner Sensor oder Aktuator sind Beispiele für ein \ac{iot} Device \cite[S.50]{conceptsiotawarepm}. Jeder Aktuator oder Sensor kann demnach als \ac{iot} Device angesehen werden. Hinzu kommt, dass \ac{iot} Devices Parameter besitzen welche die die automatische Zuweisung durch die Auflösungsinfrastruktur anpassen. %TODO sinn von Parametern besser formulieren, hier zu schwammig
+Wie in Abbildung \ref{fig:iotdevice} zu sehen ist das \ac{iot} Device, in diesem Fall ein Mobiltelefon, ein eigenständiger Akteuer und besitzt eine eigene Swimlae. Durch das Aufklappen lassen sich die Parameter der Spezifikation anzeigen.
+
+
+\begin{figure}[H]
+	\includegraphics[height=8 cm,keepaspectratio,center]{figures/IoTDevice}
+	\caption{IoT Device \cite[S.53]{conceptsiotawarepm}}
+	\label{fig:iotdevice}
+\end{figure} 
+
+\textbf{4. Process Resources}
+\newline
+Die Definition von Ressourcen des \ac{iapmc} unterscheidet sich von der in \ref{sec:DomainModel} vorgestellten. Demnach seien Ressourcen in der Geschäftsprozessmodellierung ein abstraktes Konzept welches zur Klassifizierung der menschlichen oder technischen Einsatzfähigkeit während der Prozessauflösung für die Ausführung diene. So könne eine Ressource mehrere Aktivitäten ausführen und Aktivitäten könnten mehrere Ressourcen verwenden. Ein Beispiel für eine Ressource in der Prozessmodellierung sei ein IoT-Gerät wie ein Temperatursensor, der Messmöglichkeiten in Form von Prozessaktivitäten für die Prozessausführung bereitstellen kann\cite[S.54]{conceptsiotawarepm}. %TODO besser herauskristalisieren das Ressourcen den Participants entspricht
+
+Da diese Defintion der Ressource in etwa der eines "Participants" also eines Prozessteilnehmers in \ac{bpmn} entspricht, hat das \ac{iapmc} \ac{bpmn} um zwei spezielle Prozessteilnehmer erweitert. Ein Teilnehmer der Art "Physical Entity" ist eine spezielle Art, da dieser keine Aktivitäten durchführt und keine Prozessflusselemente in seinem Pool integriert. Diese Physische Entität besitzt ähnlich wie ein \ac{iot} Device Parameter gesetzt werden um die automatische Zuweisung von zugehörigen \ac{iot} Devices zu ermöglichen. \ac{iot} Devices sind die zweite Art der erweiterten Prozessteilnehmer
 \\
 
-\textbf{2. Sensing Activity}
-\newline
-Sensoren sind physische elemente welche Bewegungen oder physikalische Werte erfasst und in elektronische Singale umwandelt. In der \ac{iot} Welt ist ein Sensor in der Lage den Zustand einer phsischen Entität zu erfassen, dieses Erfassen den physischen Zustandes wird als "sensing" bezeichnet. Sensoren sind in gewisser Weise als Gegenstück zu den Aktoren zu verstehen, ein Aktor ändert den Zustand einer physischen Entität während der Sensor seinen Zustand misst und somit die Änderung seines Zustandes registrieren kann. Als Gegenstück zu den Aktoren haben "Sensing Activities" keinen Daten Input aber dafür einen Daten Output. Allerdings werden auch diese weder weder durch die Business Process Execition Engine gestartet noch gemanaged sondern werden durch eine standardisierte Schnittstelle bereitgestellt und besitzen Anbindung an ein Data Object beziehungsweise Store.
-\\
-
-\textbf{3. Process Resources}
+\textbf{5. Physical Entity}
 \newline
 text
 \\
 
-\textbf{4. Physical Entity}
-\newline
-text
-\\
-
-\textbf{5. Real World Data Object / Store}
+\textbf{6. Real World Data Object / Store}
 \newline
 text
 \\
@@ -413,7 +468,7 @@ Additionally, the growing number of Devices shall not influence the performance 
 - Fault tolerance: The availability of Devices in the IoT is uncertain. A business process relies on the presence and communication technology of a Device and its related services. Faults may result from the absence of Devices or its communication technology, while a business process still needs to be highly reliable. The IAPMC must support the fault tolerance of a business process.
 - Quality of Information: Within enterprise systems information can be mostly considered to be accurate. As Devices and its services providing, accessing and updating data with different levels of information accuracy may be involved in business process, the quality of an accessed data object may vary widely and its entropy can get uncertain. In order to deal with this difficulty, the IAPMC shall provide means to express the quality of information.
 
-\cite{iotawareprocesses}
+\cite{conceptsiotawarepm}
 
 \subsection{Bewertung der Modellierungsmethoden}
 

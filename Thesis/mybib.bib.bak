@@ -193,7 +193,7 @@
   title    = {The Computer for the 21st Century},
   year     = {1991},
   url      = {https://www.ics.uci.edu/~corps/phaseii/Weiser-Computer21stCentury-SciAm.pdf},
-  urldate  = {2017-12-11},
+  urldate  = {2018-01-22},
   keywords = {rank1},
 }
 
@@ -210,7 +210,7 @@
   title    = {That 'Internet of Things' Thing},
   year     = {2009},
   url      = {http://www.rfidjournal.com/articles/view?4986},
-  urldate  = {2017-12-18},
+  urldate  = {2018-01-22},
   keywords = {rank1},
 }
 
@@ -299,12 +299,13 @@
   keywords  = {rank1},
 }
 
-@InProceedings{iotawareprocesses,
+@InProceedings{conceptsiotawarepm,
   author    = {Sonja, Meyer and Klaus, Sperner and Carsten, Magerkurth and Stefan, Debortoli and Matthias Thoma},
-  title     = {Concepts for Modelling IoT-Aware Processes},
-  booktitle = {Internet of Things Architecture},
+  title     = {Project Deliverable D2.2 – Concepts for Modelling IoT-Aware Processes},
+  booktitle = {Internet of Things Architecture IoT-A},
   year      = {2012},
   keywords  = {rank1},
+  url       = {http://www.meet-iot.eu/iot-a-paper.html},
 }
 
 @Online{meetiot,
@@ -325,11 +326,60 @@
 }
 
 @Online{aboutbpmcom,
-  author  = {Nathaniel Palmer},
-  title   = {About BPM.com},
+  author   = {Nathaniel Palmer},
+  title    = {About BPM.com},
+  year     = {2017},
+  url      = {https://bpm.com/about-us},
+  urldate  = {2018-01-18},
+  keywords = {rank1},
+}
+
+@InProceedings{4566972,
+  author    = {M. z. Muehlen and M. Indulska and G. Kamp},
+  title     = {Business Process and Business Rule Modeling: A Representational Analysis},
+  booktitle = {2007 Eleventh International IEEE EDOC Conference Workshop},
+  year      = {2007},
+  pages     = {189-196},
+  month     = {Oct},
+  doi       = {10.1109/EDOCW.2007.8},
+  keywords  = {business data processing;knowledge representation languages;Bunge-Wand-Weber representation theory;business process;business rule modeling;modeling languages;organizational policies;representational analysis;rule modeling languages;Conferences;Context modeling;Markup languages;Ontologies;Outsourcing;Performance analysis;Portfolios;Vocabulary},
+}
+
+@Online{ibpms,
+  author   = {Dunie ,Rob and Schulte,W. Roy and Kerremans,Marc and Cantara,Michele},
+  title    = {Magic Quadrant for Intelligent Business Process Management Suites},
+  year     = {2016},
+  url      = {http://www.integra-co.com/sites/default/files/Bizagi%20on%20Gartner%20Quadrant%20-%20Reprint.pdf},
+  urldate  = {2018-01-22},
+  keywords = {rank1},
+}
+
+@Article{bpms,
+  author     = {Karagiannis, Dimitris},
+  title      = {BPMS: Business Process Management Systems},
+  journal    = {SIGOIS Bull.},
+  year       = {1995},
+  volume     = {16},
+  number     = {1},
+  pages      = {10--13},
+  month      = aug,
+  issn       = {0894-0819},
+  acmid      = {209894},
+  address    = {New York, NY, USA},
+  doi        = {10.1145/209891.209894},
+  issue_date = {Aug. 1995},
+  keywords   = {rank1},
+  numpages   = {4},
+  publisher  = {ACM},
+  url        = {http://doi.acm.org/10.1145/209891.209894},
+}
+
+@Online{onibpms,
+  author  = {Quirk, Elizabeth},
+  title   = {Key Takeaways from Gartner’s 2017 Magic Quadrant for Intelligent Business Process Management Suites},
   year    = {2017},
-  url     = {https://bpm.com/about-us},
-  urldate = {2018-01-18},
+  url     = {https://solutionsreview.com/business-process-management/key-takeaways-gartners-2017-magic-quadrant-intelligent-business-process-management-suites/},
+  urldate = {2018-01-22},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
