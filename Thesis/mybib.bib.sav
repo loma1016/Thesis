@@ -19,7 +19,7 @@
   pages     = {152-157},
   month     = {June},
   doi       = {10.1109/WETICE.2016.41},
-  keywords  = {business data processing;cyber-physical systems;BPMN extension;BPMN4CPS;CPS;ambulance drone system;business process modeling and notation;cyber-physical system modeling;Business;Computational modeling;Context;Internet of things;Process control;Process modeling;Wireless sensor networks;BPMN;Business Process Modeling;Cyber-physical systems},
+  keywords  = {business data processing;cyber-physical systems;BPMN extension;BPMN4CPS;CPS;ambulance drone system;business process modeling and notation;cyber-physical system modeling;Business;Computational modeling;Context;Internet of things;Process control;Process modeling;Wireless sensor networks;BPMN;Business Process Modeling;Cyber-physical systems, rank1},
 }
 
 @Article{enablingiot,
