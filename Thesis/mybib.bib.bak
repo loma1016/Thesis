@@ -17,9 +17,9 @@
   booktitle = {2016 IEEE 25th International Conference on Enabling Technologies: Infrastructure for Collaborative Enterprises (WETICE)},
   year      = {2016},
   pages     = {152-157},
-  month     = {June},
+  month     = jun,
   doi       = {10.1109/WETICE.2016.41},
-  keywords  = {business data processing;cyber-physical systems;BPMN extension;BPMN4CPS;CPS;ambulance drone system;business process modeling and notation;cyber-physical system modeling;Business;Computational modeling;Context;Internet of things;Process control;Process modeling;Wireless sensor networks;BPMN;Business Process Modeling;Cyber-physical systems},
+  keywords  = {business data processing;cyber-physical systems;BPMN extension;BPMN4CPS;CPS;ambulance drone system;business process modeling and notation;cyber-physical system modeling;Business;Computational modeling;Context;Internet of things;Process control;Process modeling;Wireless sensor networks;BPMN;Business Process Modeling;Cyber-physical systems, rank1},
 }
 
 @Article{enablingiot,
@@ -49,36 +49,6 @@
   booktitle = {Business Process Model and Notation: Third International Workshop, BPMN 2011, Lucerne, Switzerland, November 21-22, 2011. Proceedings},
   doi       = {10.1007/978-3-642-25160-3_17},
   url       = {https://doi.org/10.1007/978-3-642-25160-3_17},
-}
-
-@Article{Carretero2014,
-  author  = {Carretero, Jes{\'u}s and Garc{\'i}a, J. Daniel},
-  title   = {The Internet of Things: connecting the world},
-  journal = {Personal and Ubiquitous Computing},
-  year    = {2014},
-  volume  = {18},
-  number  = {2},
-  pages   = {445--447},
-  month   = {Feb},
-  issn    = {1617-4917},
-  day     = {01},
-  doi     = {10.1007/s00779-013-0665-z},
-  url     = {https://doi.org/10.1007/s00779-013-0665-z},
-}
-
-@InBook{Abdmeziem2016,
-  pages     = {55--75},
-  title     = {Architecting the Internet of Things: State of the Art},
-  publisher = {Springer International Publishing},
-  year      = {2016},
-  author    = {Abdmeziem, Mohammed Riyadh and Tandjaoui, Djamel and Romdhani, Imed},
-  editor    = {Koubaa, Anis and Shakshuki, Elhadi},
-  address   = {Cham},
-  isbn      = {978-3-319-22168-7},
-  abstract  = {Internet of things (IoT) constitutes one of the most important technological development in the last decade. It has the potential to deeply affect our life style. However, its success relies greatly on a well-defined architecture that will provide scalable, dynamic, and secure basement to its deployment. In fact, several challenges stand between the conceptual idea of IoT, and the full deployment of its applications into our daily life. IoT deployment is closely related to the establishment of a standard architecture. This architecture should support future extensions, and covers IoT characteristics such as distributivity, interoperability, and scalability. A well defined, scalable, backward compatible, and secure architecture is required to bring the IoT concept closer to reality. In the literature, several architectures have been proposed. Nevertheless, each architecture brings a share of drawbacks, and fails covering all IoT characteristics. In this chapter, we review the main proposed architectures for the Internet of Things, highlighting their adequacy with respect to IoT requirements. Firstly, we present IoT building blocks. Then, we introduce the high level architecture of IoT before diving into the details of each proposed architecture. In addition, we introduce a classification of the reviewed architectures based on their technical aspects, and their ability to match IoT characteristics. Finally, based on the main shortcomings of the proposed architectures, we conclude with some design ideas for shaping the future IoT.},
-  booktitle = {Robots and Sensor Clouds},
-  doi       = {10.1007/978-3-319-22168-7_3},
-  url       = {https://doi.org/10.1007/978-3-319-22168-7_3},
 }
 
 @InBook{Kossak2016,
@@ -309,11 +279,12 @@
 }
 
 @Online{meetiot,
-  author  = {IoT - A},
-  title   = {IoT-A, the EU lighthouse project on Internet of Things},
-  year    = {2017},
-  url     = {http://www.meet-iot.eu/iot-a-explanation.html},
-  urldate = {2018-01-10},
+  author   = {IoT - A},
+  title    = {IoT-A, the EU lighthouse project on Internet of Things},
+  year     = {2017},
+  url      = {http://www.meet-iot.eu/iot-a-explanation.html},
+  urldate  = {2018-01-10},
+  keywords = {rank1},
 }
 
 @Online{whatisbpm,
@@ -375,11 +346,123 @@
 }
 
 @Online{onibpms,
-  author  = {Quirk, Elizabeth},
-  title   = {Key Takeaways from Gartner’s 2017 Magic Quadrant for Intelligent Business Process Management Suites},
-  year    = {2017},
-  url     = {https://solutionsreview.com/business-process-management/key-takeaways-gartners-2017-magic-quadrant-intelligent-business-process-management-suites/},
-  urldate = {2018-01-22},
+  author   = {Quirk, Elizabeth},
+  title    = {Key Takeaways from Gartner’s 2017 Magic Quadrant for Intelligent Business Process Management Suites},
+  year     = {2017},
+  url      = {https://solutionsreview.com/business-process-management/key-takeaways-gartners-2017-magic-quadrant-intelligent-business-process-management-suites/},
+  urldate  = {2018-01-22},
+  keywords = {rank1},
+}
+
+@Online{businessrules,
+  author   = {Guenther, Armin},
+  title    = {Geschäftsregelbasierte Prozessmodellierung},
+  year     = {2007},
+  url      = {https://agilesprozessmanagement.wordpress.com/category/business-rules/},
+  urldate  = {2018-01-22},
+  keywords = {rank1},
+}
+
+@Online{bpmsmarket,
+  author   = {Market Research Future},
+  title    = {Business Process Management Market Research Report- Global Forecast 2023},
+  year     = {2018},
+  url      = {https://www.marketresearchfuture.com/reports/business-process-management-market-3408},
+  urldate  = {2018-01-25},
+  keywords = {rank1},
+}
+
+@Online{appianibpms,
+  author   = {Pohla, Dirk},
+  title    = {iBPMS: Warum Gartner Appian als Leader einstuft},
+  year     = {2016},
+  url      = {https://www.appian.com/blog-de/ibpms-warum-gartner-appian-als-leader-einstuft/},
+  urldate  = {2018-01-25},
+  keywords = {rank1},
+}
+
+@Online{pegaibpms,
+  author   = {Pegasystem},
+  title    = {Pega ist Marktführer bei iBPMS},
+  year     = {2016},
+  url      = {https://www.pega.com/de/gartner-ibpms-2016},
+  urldate  = {2018-01-25},
+  keywords = {rank1},
+}
+
+@Online{enterpricearichitecture,
+  author   = {Bitkom e.V},
+  title    = {Enterprise Architecture Management – neue Disziplin für die ganzheitliche Unternehmensentwicklung},
+  year     = {2011},
+  url      = {https://www.bitkom.org/noindex/Publikationen/2011/Leitfaden/Leitfaden-EAM-Enterprise-Architecture-Management/EAM-Enterprise-Architecture-Management-BITKOM-Leitfaden.pdf},
+  urldate  = {2018-01-25},
+  keywords = {rank1},
+}
+
+@Article{Jablonski:1995:CWM:209891.209899,
+  author     = {Jablonski, Stefan},
+  title      = {On the Complementarity of Workflow Management and Business Process Modeling},
+  journal    = {SIGOIS Bull.},
+  year       = {1995},
+  volume     = {16},
+  number     = {1},
+  pages      = {33--38},
+  month      = aug,
+  issn       = {0894-0819},
+  acmid      = {209899},
+  address    = {New York, NY, USA},
+  doi        = {10.1145/209891.209899},
+  issue_date = {Aug. 1995},
+  numpages   = {6},
+  publisher  = {ACM},
+  url        = {http://doi.acm.org/10.1145/209891.209899},
+}
+
+@InBook{Delicato2017,
+  pages     = {19--32},
+  title     = {The Activity of Resource Modelling},
+  publisher = {Springer International Publishing},
+  year      = {2017},
+  author    = {Delicato, Fl{\'a}via C. and Pires, Paulo F. and Batista, Thais},
+  address   = {Cham},
+  isbn      = {978-3-319-54247-8},
+  abstract  = {In this book, we investigate the core activities encompassed in a holistic resource managementResource management         process for Internet of Things (IoTIoT        ), focusing on the different functionalities and architectural approaches involved on a basic workflow for managing the lifecycleCycle                    Lifecycle         of resources in an IoT system. We identified the following activities as the main componentsComponents         of a typical workflow for a resource management system (RMS) in IoT: resource modelling, resource discoveryDiscovery                    Resource discovery        , resource estimationResource estimation        , resource allocationAllocation         and resource monitoringResource monitoring        . In this chapter, we address the first activity, namely the resource modellingResource modelling        . The resource modelResource model         is a vital part of any RMS that aims at properly representing the elements from the different layersLayers         of an IoT ecosystemEcosystem        . In this chapter, we analyse existing proposals for resource modelling, focusing on solutions for both resource representation and application representation. Proposals for resource representation can be grouped into three main categories: attribute-basedAttribute-based        , semantic-basedSemantic-based         and virtualization-basedVirtualization-based        . After presenting some examples for each category, we briefly discuss them under three aspects: the degrees of abstraction, granularity and formalism with which the elements are represented in the models. It is important to mention that, although several works implicitly assume some type of representation for the system resources and also for the application, in our discussion we included only the proposals that explicitly define their models, with sufficient details to shed light in the relevant aspects of such models.},
+  booktitle = {Resource Management for Internet of Things},
+  doi       = {10.1007/978-3-319-54247-8_3},
+  url       = {https://doi.org/10.1007/978-3-319-54247-8_3},
+}
+
+@InBook{iotbusinessmodels,
+  pages     = {253--277},
+  title     = {Business Models for the Internet of Things},
+  publisher = {Springer Berlin Heidelberg},
+  year      = {2011},
+  author    = {Bucherer, Eva and Uckelmann, Dieter},
+  editor    = {Uckelmann, Dieter and Harrison, Mark and Michahelles, Florian},
+  address   = {Berlin, Heidelberg},
+  isbn      = {978-3-642-19157-2},
+  abstract  = {The emerging Internet of Things provides a networked infrastructure that enables incremental business transformation as well as radical business changes. So far, the full potential of possible business opportunities has not been leveraged. Within this chapter we propose the concept of business models and business model innovation as a means to align ``technological development and economic value creation'' (Chesbrough and Rosenbloom, 2002) in the Internet of Things. A central point of this paper is the value and revenue creation in the Internet of Things. We consider information to be the main source for value proposition. To investigate resulting impacts, we draw on the ``laws of information'' proposed by Moore and Walsh (2002) and deduct specifics for the Internet of Things. Building on this, we describe four exemplary business model scenarios. These are visualised using the business model framework by Osterwalder and Pigneur (2009). This framework, the fundamental rules of value creation through information in the Internet of Things and the provided examples may serve as a tool-set for practitioners to analyse and change their business models when implementing the Internet of Things.},
+  booktitle = {Architecting the Internet of Things},
+  doi       = {10.1007/978-3-642-19157-2_10},
+  keywords  = {rank1},
+  url       = {https://doi.org/10.1007/978-3-642-19157-2_10},
+}
+
+@Online{iotdevices,
+  author   = {BPM.com},
+  title    = {BPM and IoT: Transformation at the Digital Interface to the Physical World},
+  year     = {2016},
+  url      = {https://www.redhat.com/en/files/resources/bpm-iot-analyst-paper-task0168799-201604-en.pdf},
+  urldate  = {2018-02-06},
+  keywords = {rank1},
+}
+
+@Online{workflowgabler,
+  author  = {Prof. Dr. Gerhard Schewe},
+  title   = {Gabler Wirtschaftslexikon, Stichwort: Workflow},
+  year    = {2009},
+  url     = {http://wirtschaftslexikon.gabler.de/Archiv/17045/workflow-v8.html},
+  urldate = {2018-02-07},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
